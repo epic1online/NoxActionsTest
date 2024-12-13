@@ -1,5 +1,13 @@
 # Nox Changelog
 
+## 2.0.6
+
+### Bug Fixes
+ - Account container icons
+ - Expression picker searchbar and background color
+ - Message input area
+ - Reply bar
+
 ## 2.0.5
 
 ### Bug Fixes
