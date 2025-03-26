@@ -1,54 +1,54 @@
 // invite embed
-.wrapper_b9fe76 {
+.wrapper_d5f3cd {
     background-color: var(--nox-level2);
     border-radius: 3px;
 }
-.wrapper_b9fe76 .flowerStar_ff7d90 path {
+.wrapper_d5f3cd .flowerStar__3e3b0 path {
     fill: var(--nox-accent);
 }
-.guildIconExpired_b9fe76 {
+.guildIconExpired_d5f3cd {
     filter: grayscale(1);
     background-color: rgba(255, 255, 255, .05);
     border-radius: 50%;
 }
 
 // bot embed
-.embedFull_b0068a {
+.embedFull__623de {
     border-color: var(--nox-white1);
     background: var(--nox-level2);
     border-radius: 3px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
 }
 
-.botTagRegular_a02df3 {
+.botTagRegular__82f07 {
     background: var(--nox-accent);
 }
 
 // file embed
-.attachment_a4623d.attachment_a4623d {
+.fileWrapper__0ccae.fileWrapper__0ccae {
     background-color: var(--nox-level2);
     border-color: var(--nox-level3);
     border-radius: 2px;
 }
-.attachment_a4623d .metadata_a4623d {
+.fileWrapper__0ccae .metadata__0ccae {
     color: var(--nox-white2)
 }
 
 // textfile embed
-.newMosaicStyle_ad9cbd .textContainer_ad9cbd {
+.newMosaicStyle__4d95d .textContainer__4d95d {
     border-radius: 3px 3px 0 0;
 }
-.newMosaicStyle_ad9cbd .footer_ad9cbd {
+.newMosaicStyle__4d95d .footer__4d95d {
     border-radius: 0 0 3px 3px;
 }
-.textContainer_ad9cbd,
-.footer_ad9cbd,
-.codeView_ad9cbd {
+.textContainer__4d95d,
+.footer__4d95d,
+.codeView__4d95d {
     background-color: var(--nox-level2);
     border-color: var(--nox-level3);
     color: var(--nox-white6);
 }
-.toggleExpandSection_ad9cbd {
+.toggleExpandSection__4d95d {
     color: var(--nox-white6);
 }
 .theme-dark .hljs-code,
@@ -56,39 +56,39 @@
 .theme-dark .hljs-formula {
     color: var(--nox-white4);
 }
-.toggleExpandSection_ad9cbd:hover {
+.toggleExpandSection__4d95d:hover {
     color: var(--nox-white9);
 }
-.footer_ad9cbd .formattedSize_ad9cbd {
+.footer__4d95d .formattedSize__4d95d {
     color: var(--nox-white2);
 }
-.footer_ad9cbd .downloadButton_ad9cbd,
-.footer_ad9cbd .codeIcon_ad9cbd {
+.footer__4d95d .downloadButton__4d95d,
+.footer__4d95d .codeIcon__4d95d {
     color: var(--nox-white4);
 }
-.footer_ad9cbd .downloadSection_ad9cbd:hover .downloadButton_ad9cbd,
-.footer_ad9cbd .codeIcon_ad9cbd:hover {
+.footer__4d95d .downloadSection__4d95d:hover .downloadButton__4d95d,
+.footer__4d95d .codeIcon__4d95d:hover {
     color: var(--nox-white6);
 }
 // language selector
-.languageSelector_ad9cbd {
+.languageSelector__4d95d {
     background-color: var(--nox-level2);
     border-radius: 0;
 }
-.languageSelector_ad9cbd .container__33507 {
+.languageSelector__4d95d .container__33507 {
     background-color: var(--nox-level1);
     border-radius: 0;
     margin: 2px 2px 0 2px;
 }
-.languageSelector_ad9cbd .item_eef3ef {
+.languageSelector__4d95d .item__97e86 {
     border-radius: 3px;
     color: var(--nox-white4);
 }
-.focused_eef3ef, .item_eef3ef:hover:not(.disabled_eef3ef) {
+.focused__97e86, .item__97e86:hover:not(.disabled__97e86) {
     background-color: rgba(255, 255, 255, .05);
     color: var(--nox-white6);
 }
-.item_eef3ef.item_eef3ef.selected_eef3ef {
+.item__97e86.item__97e86.selected__97e86 {
     background-color: var(--nox-black3);
     color: var(--nox-white9);
 }
@@ -118,27 +118,27 @@
 }
 
 // voice embed
-.messageAttachment__5dae1 .container_d6cb89 {
+.messageAttachment__5dae1 .container_a8e786 {
     background-color: var(--nox-level3);
     border-radius: 4px;
 }
-.theme-dark .container_d6cb89:not(.playing_d6cb89) .playButtonContainer_d6cb89 {
+.theme-dark .container_a8e786:not(.playing_a8e786) .playButtonContainer_a8e786 {
     background: var(--nox-accent);
 }
-.theme-dark .container_d6cb89:not(.playing_d6cb89) .playButtonContainer_d6cb89:hover {
+.theme-dark .container_a8e786:not(.playing_a8e786) .playButtonContainer_a8e786:hover {
     background: var(--nox-accent);
     filter: brightness(1.1);
 }
-.playing_d6cb89 .playIcon_d6cb89 {
+.playing_a8e786 .playIcon_a8e786 {
     color: var(--nox-accent);
 }
-.rippleContainer_d6cb89 {
+.rippleContainer_a8e786 {
     border-radius: 0;
 }
-.ripple_d6cb89 {
+.ripple_a8e786 {
     background-color: var(--nox-level1-5);
     border-radius: 0;
 }
-.playing_d6cb89 .volumeButtonIcon_d6cb89 {
+.playing_a8e786 .volumeButtonIcon_a8e786 {
     color: var(--nox-white6);
 }

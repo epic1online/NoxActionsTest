@@ -1,46 +1,46 @@
-.container_c2739c,
-.container_bf550a {
+.container__133bf,
+.container__7d20c {
     background: var(--nox-level1);
 }
 
 // toolbar
-.icon_fc4f04 {
+.icon__9293f {
     color: var(--nox-white4);
 }
-.title_fc4f04 {
+.title__9293f {
     color: var(--nox-white7);
 }
-.tabBar_c2739c .item_c2739c.item_c2739c.selected_a0,
-.tabBar_c2739c .item_c2739c.item_c2739c.selected_a0:hover
+.tabBar__133bf .item__133bf.item__133bf.selected_b3f026,
+.tabBar__133bf .item__133bf.item__133bf.selected_b3f026:hover
  {
     background-color: var(--nox-white1);
 }
-.themed_a0.item_c2739c {
+.themed_b3f026.item__133bf {
     color: var(--nox-white4);
 }
-.themed_a0.item_c2739c:hover {
+.themed_b3f026.item__133bf:hover {
     color: var(--nox-white6);
 }
-.tabBar_c2739c .themed_a0.item_c2739c:hover:not(.disabled_a0):not(.addFriend_c2739c) {
+.tabBar__133bf .themed_b3f026.item__133bf:hover:not(.disabled_b3f026):not(.addFriend__133bf) {
     background-color: rgba(255, 255, 255, 0.05);
 }
-.item_c2739c.selected_a0,
-.item_c2739c.selected_a0:hover {
+.item__133bf.selected_b3f026,
+.item__133bf.selected_b3f026:hover {
     color: var(--nox-white9);
 }
-.tabBar_c2739c .addFriend_c2739c.addFriend_c2739c.addFriend_c2739c,
-.tabBar_c2739c .addFriend_c2739c.addFriend_c2739c.addFriend_c2739c:hover {
+.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf,
+.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf:hover {
     background-color: var(--nox-accent);
     color: var(--nox-white9);
 }
-.tabBar_c2739c .addFriend_c2739c.addFriend_c2739c.addFriend_c2739c[aria-selected=true],
-.tabBar_c2739c .addFriend_c2739c.addFriend_c2739c.addFriend_c2739c[aria-selected=true]:hover {
+.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf[aria-selected=true],
+.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf[aria-selected=true]:hover {
     background-color: transparent;
     color: var(--nox-accent);
 }
 
 // search bar
-.searchBar_e0840f {
+.searchBar__5ec2f {
     margin-left: 20px;
     margin-right: 25px;
     background: var(--nox-level3);
@@ -59,132 +59,132 @@
 }
 
 // friend list
-.peopleListItem_d51464 {
+.peopleListItem_cc6179 {
     margin: 0 10px 0 20px;
     padding: 16px 10px;
     // border-radius: 0;
     border-top: none;
     background-color: rgba(0,0,0,.1);
 }
-.peopleListItem_d51464:hover {
+.peopleListItem_cc6179:hover {
     // margin-bottom: 16px;
     border-radius: 0;
     background: rgba(255, 255, 255, 0.03);
 }
-.peopleListItem_d51464:nth-child(2) {
+.peopleListItem_cc6179:nth-child(2) {
     border-radius: 4px 4px 0 0;
 }
-.peopleListItem_d51464:last-child {
+.peopleListItem_cc6179:last-child {
     border-radius: 0 0 4px 4px;
 }
-.title_a1cafe,
-.username_f3939d {
+.title__1472a,
+.username__0a06e {
     color: var(--nox-white6);
 }
-.discriminator_f3939d,
-.subtext_f3939d {
+.discriminator__0a06e,
+.subtext__0a06e {
     color: var(--nox-white4);
 }
-.actionButton_e01b91,
-.actionButton_e01b91.highlight_e01b91 {
+.actionButton_f8fa06,
+.actionButton_f8fa06.highlight_f8fa06 {
     background-color: var(--nox-black4);
     color: var(--nox-white6);
 }
-.actionButton_e01b91:hover {
+.actionButton_f8fa06:hover {
     background-color: var(--nox-black6);
     color: var(--nox-white9);
 }
 
 // activity section
-.scroller_bf550a {
+.scroller__7d20c {
     border-left-color: rgba(255, 255, 255, 0.05);
 }
-.scroller_bf550a .defaultColor_e9e35f {
+.scroller__7d20c .defaultColor_e9e35f {
     color: var(--nox-white7);
 }
-.itemCard_f02fcf {
+.itemCard__7e549 {
     border: none;
     background-color: var(--nox-black4);
     border-radius: 4px;
 }
-.body_cd82a7.body_cd82a7 {
+.body__00943.body__00943 {
     background: none;
 }
-.section_cd82a7 {
+.section__00943 {
     background-color: var(--nox-white1);
 }
-.section_cd82a7:first-child {
+.section__00943:first-child {
     border-radius: 4px 4px 0 0;
 }
-.section_cd82a7:last-child {
+.section__00943:last-child {
     border-radius: 0 0 4px 4px;
 }
-.section_cd82a7:only-child {
+.section__00943:only-child {
     border-radius: 4px;
 }
-.theme-dark .outer_c0f6a6.interactive_c0f6a6:hover {
+.theme-dark .outer_bf1984.interactive_bf1984:hover {
     background-color: var(--nox-black2);
 }
-.itemCard_f02fcf .defaultColor__77578 {
+.itemCard__7e549 .defaultColor__77578 {
     color: var(--nox-white6);
 }
-.itemCard_f02fcf .text-sm-normal__95a78.textContent_cd82a7 {
+.itemCard__7e549 .text-sm-normal__95a78.textContent__00943 {
     color: var(--nox-white4) !important;
 }
-.section_cd82a7 .textContent_cd82a7 {
+.section__00943 .textContent__00943 {
     color: var(--nox-white7);
 }
 
-.tabBody_c2739c .image__08515 {
+.tabBody__133bf .image__08515 {
     filter: grayscale(1);
 }
 
 // add friend section
-#add_friend-tab .title_c46f6a {
+#add_friend-tab .title_b717a1 {
     color: var(--nox-white7);
 }
-.description_b89ec7,
-.labelDescriptor_b89ec7,
+.description_ddd181,
+.labelDescriptor_ddd181,
 .text__0e310,
 .title__496be {
     color: var(--nox-white4);
 }
-.addFriendInputWrapper_de812f {
+.addFriendInputWrapper__72ba7 {
     background-color: var(--nox-level2);
     border: none;
     border-radius: 4px;
 }
-.input_de812f {
+.input__72ba7 {
     color: var(--nox-white6);
     letter-spacing: normal;
 }
-.input_de812f::placeholder {
+.input__72ba7::placeholder {
     color: var(--nox-white2);
 }
-.container_aef5fd{
+.container_a14595{
     border: none;
     background-color: var(--nox-black4);
     border-radius: 4px;
 }
-.container_aef5fd:hover {
+.container_a14595:hover {
     background-color: var(--nox-black2);
 }
-.container_aef5fd:active {
+.container_a14595:active {
     background-color: var(--nox-black1);
 }
-.container_aef5fd .icon_aef5fd {
+.container_a14595 .icon_a14595 {
     border-radius: 50%;
 }
-.container_aef5fd:last-child .icon_aef5fd {
+.container_a14595:last-child .icon_a14595 {
     filter: brightness(93%) hue-rotate(93deg) saturate(170%);
 }
-.container_aef5fd .text_aef5fd,
-.arrow_aef5fd {
+.container_a14595 .text_a14595,
+.arrow_a14595 {
     color: var(--nox-white4);
 }
-.container_aef5fd:hover .text_aef5fd,
-.container_aef5fd:hover .arrow_aef5fd,
-.container_aef5fd:active .text_aef5fd,
-.container_aef5fd:active .arrow_aef5fd {
+.container_a14595:hover .text_a14595,
+.container_a14595:hover .arrow_a14595,
+.container_a14595:active .text_a14595,
+.container_a14595:active .arrow_a14595 {
     color: var(--nox-white6);
 }

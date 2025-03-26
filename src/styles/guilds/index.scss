@@ -1,125 +1,158 @@
 // Guild list bg color
-.guilds_a4d4d9 {
+.guilds_c48ade.guilds_c48ade {
     z-index: $guilds-elevation;
     width: 70px;
     background: var(--nox-level1) !important;
     box-shadow: $elevation-shadow;
 }
 
+// Remove gap between servers
+.guilds_c48ade .stack_dbd263 {
+    gap: 0 !important;
+}
+
 // Remove existing color and padding
-.guilds_a4d4d9 .scroller_fea3ef {
+.guilds_c48ade .scroller_ef3116 {
     background: transparent;
     padding: 0;
+    height: 100%;
 }
 
 // Hide scroller
-.guilds_a4d4d9 .scroller_fea3ef::-webkit-scrollbar {
+.guilds_c48ade .scroller_ef3116::-webkit-scrollbar {
     width: 0 !important;
 }
 
 // Separator
-.guildSeparator_d0c57e {
+.guildSeparator__252b6 {
     background: var(--nox-white1);
 }
 
 // Remove move down on click
-.listItemWrapper_dfb2f8:active,
-.listItem_c96c45 .blobContainer_a5ad63:active {
-    transform: none;
-}
+// .listItemWrapper_dfb2f8:active,
+// .listItem__650eb .blobContainer_e5445c:active {
+//     transform: none;
+// }
+
+// remove discover background
+// .footer__214dc {
+//     background: none;
+//     padding: 0;
+//     margin: 0;
+// }
+
+// remove gap between add server and discover
+// .gradient__214dc {
+//     display: none;
+// }
 
 // remove folder background
-.folder_bc7085 {
+.folderIconWrapper__48112 {
     background: none !important;
 }
 
 // recolor closed folders
-.collapsed_bc7085+div .folderIconWrapper_bc7085 {
-    background: var(--nox-white2) !important;
+.closedFolderIconWrapper__48112.closedFolderIconWrapper__48112 {
+    background: var(--nox-white2);
+    width: 48px;
+    height: 48px;
+    .guildIcon__48112 {
+        border-radius: 50% !important;
+    }
 }
 
-// recolor open folders
-.expandedFolderBackground_bc7085 {
+// recolor open folders and shape them
+.expandedFolderBackground__48112.expandedFolderBackground__48112 {
     background: var(--nox-white1) !important;
+    bottom: 8px;
+    padding: 6px;
+    left: 5px;
+    border-radius: 16px 16px 30px 30px;
+    box-sizing: content-box;
+    border: 0;
 }
 
 // TODO might be able to remove this - Remove weird folder background
-.expandedFolderBackground_bc7085.collapsed_bc7085 {
-    background: none !important;
-}
+// .expandedFolderBackground__48112.collapsed__48112 {
+//     background: none !important;
+// }
 
 // Allow smaller border radii
-.expandedFolderBackground_bc7085 + .listItem_c96c45 .svg_c5f96a foreignObject {
+.listItem__650eb .svg_cc5dd2 foreignObject {
     mask: none;
+    transform: translateX(-4px) translateY(-4px) scale(1.2);
 }
 
 // remove margin between servers
-.listItem_c96c45 {
-    margin-bottom: 0;
+.listItem__650eb {
+    // margin-bottom: 0;
     width: 70px;
+    height: 70px;
 }
 
 // increase clicking area
-.listItem_c96c45 .svg_c5f96a {
+.listItem__650eb .svg_cc5dd2 {
     height: 70px;
     width: 70px;
+    top: 0;
+    left: 0;
     z-index: $guilds-elevation;
 }
 
 // allow dragging to work properly
-.wrapper_b7c66a {
+.wrapper_d144f8 {
     z-index: $guilds-elevation;
 }
 
 // increase wrapper size and center servers
-.listItem_c96c45 .wrapper_c5f96a {
-    height: 70px;
-    width: 70px;
+.listItem__650eb .wrapper_cc5dd2 {
+    height: 70px !important;
+    width: 70px !important;
     border-radius: unset;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    .svg_c5f96a rect { // scale down badge masks
+    .svg_cc5dd2 rect { // scale down badge masks
         display: none;
     }
     
 }
 
 // scale down icons back to normal
-.wrapper_f90abb .childWrapper_f90abb, // home icon
-.wrapper_f90abb .acronym_f90abb, // iconless servers
-.folder_bc7085 .folderIconWrapper_bc7085, // folders
-.circleIconButton_db6521, // add server and discovery
-.wrapper_f90abb .icon_f90abb {
+.wrapper__6e9f8 .childWrapper__6e9f8, // home icon
+.wrapper__6e9f8 .acronym__6e9f8, // iconless servers
+.folder__48112 .folderIconWrapper__48112, // folders
+.circleIconButton__5bc7e, // add server and discovery
+.wrapper__6e9f8 .icon__6e9f8 {
     transform: scale(calc(48/70));
     border-radius: 50%;
 }
 
 // fix spacing after unread dm circle
-.scroller_fea3ef div[style="opacity: 1; height: 56px; transform: scale(1);"] {
+.scroller_ef3116 div[style="opacity: 1; height: 56px; transform: scale(1);"] {
     height: 70px !important;
 }
 
 // Home button and circle buttons
-.childWrapper_f90abb,
-.circleIconButton_db6521 {
+.childWrapper__6e9f8,
+.circleIconButton__5bc7e {
     background: var(--nox-level2);
 }
 
 // change blurple to accent bg
-.wrapper_f90abb.selected_f90abb .childWrapper_f90abb, // home icon and iconless guilds
-.circleIconButton_db6521.selected_db6521 { // add server and discovery
-    background: var(--nox-accent);
+.wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8, // home icon and iconless guilds
+.circleIconButton__5bc7e.selected__5bc7e { // add server and discovery
+    background: var(--nox-accent) !important;
 }
 
 // discovery and add server change blurple to accent
-.circleIconButton_db6521 {
+.circleIconButton__5bc7e {
     color: var(--nox-accent);
 }
 
 // blanks pill item
-.listItem_c96c45 .item_c4cd66 {
+.listItem__650eb .item__58105 {
     box-sizing: border-box;
     background: none;
     margin: 0;
@@ -128,7 +161,7 @@
 }
 
 // set up hover/active/selected bg
-.wrapper_c5f96a::after {
+.wrapper_cc5dd2::after {
     content: "";
     display: block;
     position: absolute;
@@ -140,23 +173,23 @@
 }
 
 // hover bg
-.wrapper_c5f96a:hover::after {
+.wrapper_cc5dd2:hover::after {
     background: var(--nox-white1);
 }
 
 // active bg
-.wrapper_c5f96a:active::after {
+.wrapper_cc5dd2:active::after {
     background: var(--nox-black2);
 }
 
-.selected_a5ad63 .wrapper_c5f96a::after,
-.selected_dfb2f8 .wrapper_c5f96a::after,
-.listItem_c96c45:has(.item_c4cd66[style="opacity: 1; height: 40px; transform: none;"]) .wrapper_c5f96a::after {
+.selected_e5445c .wrapper_cc5dd2::after,
+.selected_dfb2f8 .wrapper_cc5dd2::after,
+.listItem__650eb:has(.item__58105[style="opacity: 1; height: 40px; transform: none;"]) .wrapper_cc5dd2::after {
     background: var(--nox-black2);
 }
 
 // set up unread circle
-.wrapper_c5f96a::before {
+.wrapper_cc5dd2::before {
     content: "";
     display: block;
     position: absolute;
@@ -170,7 +203,7 @@
     z-index: 2;
 }
 
-.listItem_c96c45:has(.item_c4cd66[style="opacity: 1; height: 8px; transform: none;"]) .wrapper_c5f96a::before {
+.listItem__650eb:has(.item__58105[style="opacity: 1; height: 8px; transform: none;"]) .wrapper_cc5dd2::before {
     border-color: var(--nox-notification-color);
 }
 
@@ -178,37 +211,31 @@
 // TODO might move to another file Server folder stuff
 
 // change hover/active/selected background for folders
-.wrapper_bc7085 ul[id*=folder-items] .wrapper_c5f96a::after {
+.wrapper__48112 ul[id*=folder-items] .wrapper_cc5dd2::after {
     width: 60px;
     left: 5px;
 }
 
 // prevent hover highlight for open folder icon
-.wrapper_bc7085 > :not(.collapsed_bc7085) + .listItem_c96c45 .wrapper_c5f96a::after {
+.wrapper__48112 > :not(.collapsed__48112) + .listItem__650eb .wrapper_cc5dd2::after {
     content: none
 }
 
-.wrapper_bc7085 ul[id*=folder-items] .listItem_c96c45:last-child .wrapper_c5f96a::after {
+.wrapper__48112 ul[id*=folder-items] .listItem__650eb:last-child .wrapper_cc5dd2::after {
     border-radius: 0 0 30px 30px;
     height: 62px;
 }
 
-.wrapper_bc7085 ul[id*=folder-items] {
+.wrapper__48112 ul[id*=folder-items] {
     height: auto !important;
-}
-
-.expandedFolderBackground_bc7085 {
-    padding: 6px;
-    left: 5px;
-    border-radius: 16px 16px 30px 30px;
 }
 
 
 // BADGES
 
 // alignment of badges
-.lowerBadge_c5f96a,
-.upperBadge_c5f96a {
+.lowerBadge_cc5dd2,
+.upperBadge_cc5dd2 {
     top: calc((100% - 48px) / 2);
     left: calc((100% - 48px) / 2);
     width: 48px;
@@ -218,21 +245,21 @@
     z-index: calc($guilds-elevation + 1);
 }
 
-.lowerBadge_c5f96a {
+.lowerBadge_cc5dd2 {
     align-items: flex-end;
 }
 
-.upperBadge_c5f96a {
+.upperBadge_cc5dd2 {
     align-items: flex-start;
 }
 
 // in call background green to accent
-.iconBadge_c96c45.participating-2Z81oO {
+.iconBadge__650eb.participating-2Z81oO {
     background-color: var(--nox-accent);
 }
 
 // recolor call available background
-.iconBadge_c96c45 {
+.iconBadge__650eb {
     background-color: var(--nox-level1-5);
 }
 
@@ -244,41 +271,41 @@
 // TODO Will move to separate file
 
 // folder color to accent
-.expandedFolderIconWrapper_bc7085 svg {
+.expandedFolderIconWrapper__48112 svg {
     color: var(--nox-accent) !important;
 }
 
 // material icon
-.folder_bc7085 svg path {
+.folder__48112 svg path {
     d: path("M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z");
 }
 
 // material icon hover/open
-.folder_bc7085.hover_bc7085 svg path {
+.folder__48112.hover__48112 svg path {
     d: path("M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z");
 }
 
 // make material icon bigger
-.folder_bc7085 svg {
+.folder__48112 svg {
     height: 32px;
     width: 32px;
 }
 
 // enlarge drag placeholder wrapper
-.placeholderMask_f734d8 {
+.placeholderMask__87847 {
     width: 70px;
     height: 70px;
 }
 
  // color and scale icon back down
-.dragInner_f734d8 {
+.dragInner__87847 {
     background-color: var(--nox-black3);
     border-radius: 50%;
     transform: scale(calc(48/70));
 }
 
 // dragging position indicator green to accent
-.centerTarget_b7c66a.dragOver_b7c66a:before, // combine server
-.target_b7c66a.dragOver_b7c66a:before { // above server
+.centerTarget_d144f8.dragOver_d144f8:before, // combine server
+.target_d144f8.dragOver_d144f8:before { // above server
 	background-color: var(--nox-accent);
 }

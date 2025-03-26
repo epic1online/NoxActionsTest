@@ -1,15 +1,15 @@
-.divider_d5deea.hasContent_d5deea:not(.isUnread_c2654d) {
+.divider__5126c.hasContent__5126c:not(.isUnread__908e2) {
     border-color: transparent;
 }
 
-.divider_d5deea.hasContent_d5deea .content_c2654d {
+.divider__5126c.hasContent__5126c .content__908e2 {
     background: rgba(0, 0, 0, 0.1);
     color: var(--nox-white3);
     padding: 3px 10px;
     border-radius: 3px;
 }
 
-#---new-messages-bar.hasContent_d5deea .content_c2654d {
+#---new-messages-bar.hasContent__5126c .content__908e2 {
     background: #2b2b2b;
 }
 
@@ -17,7 +17,7 @@
     border-top: 1px solid #f04747;
 }
 
-#---new-messages-bar:not(.hasContent_d5deea):not(.beforeGroup_d5deea) {
+#---new-messages-bar:not(.hasContent__5126c):not(.beforeGroup__5126c) {
     margin-top: -3px;
     margin-bottom: 2px;
 }

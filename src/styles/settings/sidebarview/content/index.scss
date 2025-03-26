@@ -1,67 +1,67 @@
 // Content background color
-.standardSidebarView_c25c6d .contentRegionScroller_c25c6d {
+.standardSidebarView__23e6b .contentRegionScroller__23e6b {
     background: var(--nox-level2);
 }
 
-.contentColumn_c25c6d .input_f8bc55,
-.bioTextArea_ccf27d.bioTextArea_ccf27d {
+.contentColumn__23e6b .input__0f084,
+.bioTextArea__6a919.bioTextArea__6a919 {
     background-color: var(--nox-level1);
 }
 
-.itemFilled_eb92a8 {
+.itemFilled__001a7 {
     background-color: var(--nox-level3);
 }
 
-.itemFilled_eb92a8[aria-checked="true"] {
+.itemFilled__001a7[aria-checked="true"] {
     background-color: var(--nox-level1);
 }
 
-.top_a0 .brand_a0.item_a0:hover {
+.top_b3f026 .brand_b3f026.item_b3f026:hover {
     border-color: var(--nox-white4);
 }
-.top_a0 .brand_a0.selected_a0.item_a0 {
+.top_b3f026 .brand_b3f026.selected_b3f026.item_b3f026 {
     border-color: var(--nox-accent);
 }
 
-.avatarBackground_bb882a {
+.avatarBackground_eb2508 {
     background-color: transparent;
 }
 
-.health_f7ea1b {
+.health_d878e7 {
     width: 95%;
 }
-.line_f7ea1b,
-.marker_f7ea1b {
+.line_d878e7,
+.marker_d878e7 {
     background-color: var(--nox-level3);
 }
-.marker_f7ea1b .empty_f7ea1b {
+.marker_d878e7 .empty_d878e7 {
     background-color: var(--nox-level1);
 }
 
-.cardPrimary_cb7a0e.outline_a298b8 {
+.cardPrimary_cb7a0e.outline__73069 {
     background: var(--nox-level3);
     border: none;
 }
 
-.connectContainer_e2a436 {
+.connectContainer_c7f964 {
     background-color: var(--nox-level1);
 }
-.accountButtonInner_e2a436 {
+.accountButtonInner_c7f964 {
     background-color: var(--nox-level2);
 }
 
-.connection_e2a436 {
+.connection_c7f964 {
     background-color: var(--nox-level1-5);
 }
-.connectionHeader_e2a436 {
+.connectionHeader_c7f964 {
     background: var(--nox-level1);
 }
-.metadataContainer_e2a436,
-.integration_e2a436 {
+.metadataContainer_c7f964,
+.integration_c7f964 {
     background-color: var(--nox-level2);
 }
 
-#appearance-tab .cardPrimary_cb7a0e.outline_a298b8 {
+#appearance-tab .cardPrimary_cb7a0e.outline__73069 {
     background-color: var(--nox-level1);
 }
 

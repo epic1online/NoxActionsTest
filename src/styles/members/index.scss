@@ -1,26 +1,26 @@
-.members_cbd271,
-// .members_cbd271 > div,
-.member_a31c43 {
+.members_c8ffbb,
+// .members_c8ffbb > div,
+.member__5d473 {
     background: var(--nox-level2);
     color: var(--nox-white5);
 }
 
-.container_cbd271 {
+.container_c8ffbb {
     z-index: $channels-elevation;
     box-shadow: $elevation-shadow;
     background: var(--nox-level2);
 }
 .container_cc72c1, // Role name
-.activity_a31c43 {
+.activity__5d473 {
     color: var(--nox-white4);
 }
 
-.clickable_e9f61e:hover .layout_e9f61e { // hover on member
+.clickable__91a9d:hover .layout__91a9d { // hover on member
     background-color: rgba(255, 255, 255, 0.05);
     color: var(--nox-white7);
 }
 
-.selected_e9f61e .layout_e9f61e { // selected member
+.selected__91a9d .layout__91a9d { // selected member
     background-color: var(--nox-level3);
     color: var(--nox-white9);
 }

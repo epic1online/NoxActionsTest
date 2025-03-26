@@ -34,7 +34,7 @@
         border-radius: 0;
     }
 
-    .body_b9fccc {
+    .body__24502 {
         border-radius: 0;
         height: 100%;
     }
@@ -62,7 +62,7 @@
     }
 
     .infoScroller_a24910,
-    .listScroller_e4be58 {
+    .listScroller__9d78f {
         z-index: 0;
         overflow: hidden overlay !important;
     }
@@ -70,7 +70,7 @@
         padding-left: 28px;
         padding-right: 28px !important;
     }
-    .listScroller_e4be58 {
+    .listScroller__9d78f {
         padding-left: 16px;
         padding-right: 16px !important;
     }
@@ -88,7 +88,7 @@
     }
 
     // hover/selected
-    .tabBarItem_b9fccc.selected_a0,
+    .tabBarItem_b9fccc.selected_b3f026,
     .tabBarItem_b9fccc:hover {
         opacity: 1;
         border-bottom-color: transparent !important;
@@ -101,17 +101,17 @@
     }
 
     // mutual servers & friends
-    .listRow_e4be58 {
+    .listRow__9d78f {
         margin: 1px 0;
         padding: 8px;
     }
 
     // mutual server icons
-    .listRow_e4be58 .icon_f11207 {
+    .listRow__9d78f .icon_f34534 {
         border-radius: 50%;
     }
 
-    .emptyIcon_e4be58 { // no common servers/friends icon
+    .emptyIcon__9d78f { // no common servers/friends icon
         filter: contrast(1.1) grayscale(1) brightness(1.5);
     }
 }
@@ -124,12 +124,12 @@
     }
 
     .infoScroller_a24910,
-    .listScroller_e4be58 {
+    .listScroller__9d78f {
         background: var(--nox-level1);
     }
 
     
-    .listRow_e4be58:hover {
+    .listRow__9d78f:hover {
         background-color: rgba(255, 255, 255, 0.05);
     }
 
@@ -139,7 +139,7 @@
 .userProfileModalOuter_c69a7b.userProfileOuterThemed_c69a7b {
 
     .infoScroller_a24910::before,
-    .listScroller_e4be58::before {
+    .listScroller__9d78f::before {
         content: '';
         width: 600px;
         height: 264px;
@@ -150,7 +150,7 @@
         opacity: 0.75;
     }
     .infoScroller_a24910::after,
-    .listScroller_e4be58::after {
+    .listScroller__9d78f::after {
         content: '';
         width: 600px;
         height: 264px;
@@ -161,11 +161,11 @@
         z-index: -1;
     }
     .infoScroller_a24910 > *,
-    .listScroller_e4be58 > *{
+    .listScroller__9d78f > *{
         position: relative;
     }
     .userProfileInnerThemedPremiumWithoutBanner_c69a7b .infoScroller_a24910::after,
-    .userProfileInnerThemedPremiumWithoutBanner_c69a7b .listScroller_e4be58::after {
+    .userProfileInnerThemedPremiumWithoutBanner_c69a7b .listScroller__9d78f::after {
         background: linear-gradient(var(--profile-gradient-primary-color) -300px, var(--profile-gradient-secondary-color));
     }
 }
@@ -206,4 +206,18 @@
     .tabBarItem_b9fccc:nth-last-child(1) { // mutual servers
         content: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMjAgMTNINGMtLjU1IDAtMSAuNDUtMSAxdjZjMCAuNTUuNDUgMSAxIDFoMTZjLjU1IDAgMS0uNDUgMS0xdi02YzAtLjU1LS40NS0xLTEtMXpNNyAxOWMtMS4xIDAtMi0uOS0yLTJzLjktMiAyLTIgMiAuOSAyIDItLjkgMi0yIDJ6TTIwIDNINGMtLjU1IDAtMSAuNDUtMSAxdjZjMCAuNTUuNDUgMSAxIDFoMTZjLjU1IDAgMS0uNDUgMS0xVjRjMC0uNTUtLjQ1LTEtMS0xek03IDljLTEuMSAwLTItLjktMi0ycy45LTIgMi0yIDIgLjkgMiAyLS45IDItMiAyeiIvPjwvc3ZnPg==);
     }
+}
+
+// fullsize
+.fullSizeOuter_c69a7b {
+    .statusBubbleOuter_af9888.statusBubbleOuter_af9888.statusBubbleOuter_af9888 {
+        max-width: 240px;
+        .content_ab8609 {
+            max-height: none !important;
+        }
+    }
+    
+    // .clamp_af9888 {
+    //     -webkit-line-clamp: 9;
+    // }
 }

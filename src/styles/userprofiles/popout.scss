@@ -88,7 +88,7 @@
 .userPopoutOuter_c69a7b.userProfileOuterUnthemed_c69a7b {
     background-color: var(--nox-level2);
 
-    // .avatar_c51b4e { // avatar bg
+    // .avatar__44b0c { // avatar bg
     //     background: var(--nox-level2);
     // }
 
@@ -105,30 +105,30 @@
 }
 
 // Role stuff
-.role_e4010c { // set up role bg
+.role__48c1c { // set up role bg
     background: none;
     padding: 0 2px 0 6px;
     border-width: 0;
     border-radius: 3px;
     overflow: hidden;
 
-    .roleName_e4010c { // puts text on top of role bg
+    .roleName__48c1c { // puts text on top of role bg
         z-index: 1;
     }
 
-    .roleIcon_e4010c { // role icon styling and puts on top of role bg 
+    .roleIcon__48c1c { // role icon styling and puts on top of role bg 
         z-index: 1;
         border-radius: 3px;
         height: auto;
         position: relative;
     }
 
-    .roleRemoveButton_e4010c { // move remove role button to end
+    .roleRemoveButton__48c1c { // move remove role button to end
         order: 2;
 
         // role bg color
-        .roleCircle_a26d7b::before,
-        .roleFlowerStar_e4010c::before {
+        .roleCircle__4f569::before,
+        .roleFlowerStar__48c1c::before {
             content: "";
             visibility: visible;
             background-color: inherit;
@@ -139,28 +139,28 @@
             opacity: 0.6;
         }
     
-        .roleFlowerStar_e4010c::before { // connected account role layout fix
+        .roleFlowerStar__48c1c::before { // connected account role layout fix
             top: -4px;
         }
 
         // hide role circle
-        .roleCircle_a26d7b,
-        .roleFlowerStar_e4010c {
+        .roleCircle__4f569,
+        .roleFlowerStar__48c1c {
             margin: 0;
             visibility: hidden;
         }
 
     }
 
-    .roleRemoveButton_e4010c[aria-hidden="false"] { // re-add remove role button if removable role
+    .roleRemoveButton__48c1c[aria-hidden="false"] { // re-add remove role button if removable role
         background: transparent;
         background-image: url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0icm9sZVJlbW92ZUljb24tMml1MGlFIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDBoMTJ2MTJIMCI+PC9wYXRoPjxwYXRoIGNsYXNzPSJmaWxsIiBmaWxsPSIjZmZmZmZmIiBkPSJNOS41IDMuMjA1TDguNzk1IDIuNSA2IDUuMjk1IDMuMjA1IDIuNWwtLjcwNS43MDVMNS4yOTUgNiAyLjUgOC43OTVsLjcwNS43MDVMNiA2LjcwNSA4Ljc5NSA5LjVsLjcwNS0uNzA1TDYuNzA1IDYiPjwvcGF0aD48L2c+PC9zdmc+);
         margin-right: 2px;    
     }
 
     // remove space occupied by role circle
-    .roleRemoveButton_e4010c[aria-hidden="true"] .roleCircle_a26d7b,
-    .roleRemoveButton_e4010c:has(.roleFlowerStar_e4010c) {
+    .roleRemoveButton__48c1c[aria-hidden="true"] .roleCircle__4f569,
+    .roleRemoveButton__48c1c:has(.roleFlowerStar__48c1c) {
         width: 0;
     }
 }
@@ -175,7 +175,7 @@
     }
 
     // adds background to pfps to block nox shapes
-    // .avatarStack_c51b4e::before {
+    // .avatarStack__44b0c::before {
     //     content: '';
     //     width: 100%;
     //     height: 100%;
@@ -186,7 +186,7 @@
     // }
 
     // darkens avatar background
-    // .avatar_c51b4e {
+    // .avatar__44b0c {
     //     border-radius: 50%;
     //     // background-color: var(--profile-gradient-overlay-color);
     //     // position: relative;
@@ -233,8 +233,48 @@
     // puts notes+quickmessage back above bg
     .section_d7a21f:has(.note_c90ad7) .title_c4a579,
     .section_d7a21f:has(.note_c90ad7) .note_c90ad7,
-    .section_f2c0a8 .inputWrapper_f8bc55 {
+    .section_f2c0a8 .inputWrapper__0f084 {
         position: relative;
         z-index: 1;
     }
+}
+
+
+// bitesized
+.invisibleContainer_af9888 {
+    display: none;
+}
+
+.biteSizeOuter_c69a7b .visibleContainer_af9888.biteSize_ab8609 {
+    position: relative;
+    top: 28px;
+    left: 0;
+}
+
+.statusBubbleOuter_af9888.statusBubbleOuter_af9888.statusBubbleOuter_af9888 {
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: unset;
+    min-width: unset;
+
+    &::before,
+    &::after {
+        content: none;
+    }
+}
+
+.statusBubble_af9888 {
+    background: none;
+    border-radius: 0;
+    padding: 16px;
+
+    .content_ab8609 {
+        text-align: left;
+    }
+}
+
+.biteSizeOuter_c69a7b:has(.visibleContainer_af9888) .body__5be3e {
+    margin-top: 16px;
 }
