@@ -130,7 +130,7 @@
 }
 
 // fix spacing after unread dm circle
-.scroller_ef3116 div[style="opacity: 1; height: 56px; transform: scale(1);"] {
+.scroller_ef3116 div[style="opacity: 1; height: 40px; transform: scale(1);"] {
     height: 70px !important;
 }
 
@@ -273,6 +273,11 @@
 // folder color to accent
 .expandedFolderIconWrapper__48112 svg {
     color: var(--nox-accent) !important;
+}
+
+// remove icon highlight on hover
+.folder__48112.folder__48112.hover__48112 .expandedFolderIconWrapper__48112 {
+    background: none;
 }
 
 // material icon
