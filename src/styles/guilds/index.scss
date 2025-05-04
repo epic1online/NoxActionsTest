@@ -23,32 +23,18 @@
     width: 0 !important;
 }
 
-// Separator
-.guildSeparator__252b6 {
-    background: var(--nox-white1);
+// Fix weird spacing between home icon and guild list
+.tutorialContainer__1f388 + .stack_dbd263 {
+    margin-top: 0;
 }
 
-// Remove move down on click
-// .listItemWrapper_dfb2f8:active,
-// .listItem__650eb .blobContainer_e5445c:active {
-//     transform: none;
-// }
+.tutorialContainer__1f388 + .stack_dbd263 + .listItem__650eb {
+    display: flex;
+}
 
-// remove discover background
-// .footer__214dc {
-//     background: none;
-//     padding: 0;
-//     margin: 0;
-// }
-
-// remove gap between add server and discover
-// .gradient__214dc {
-//     display: none;
-// }
-
-// remove folder background
-.folderPreviewWrapper__48112 {
-    // background: none;
+// Separator
+.guildSeparator__252b6.guildSeparator__252b6 {
+    background: var(--nox-white1);
 }
 
 // recolor closed folders
@@ -56,7 +42,7 @@
     background: var(--nox-white2);
     width: 48px;
     height: 48px;
-    .guildIcon__48112 {
+    .folderPreviewGuildIcon__48112 {
         border-radius: 50% !important;
     }
 }
@@ -72,15 +58,10 @@
     border: 0;
 }
 
-// TODO might be able to remove this - Remove weird folder background
-// .expandedFolderBackground__48112.collapsed__48112 {
-//     background: none !important;
-// }
-
 // Allow smaller border radii
 .listItem__650eb .svg_cc5dd2 foreignObject {
     mask: none;
-    transform: translateX(-4px) translateY(-4px) scale(1.2);
+    transform: translateX(-4px) translateY(-4px) scale(calc(70/60));
 }
 
 // remove margin between servers
@@ -88,6 +69,10 @@
     // margin-bottom: 0;
     width: 70px;
     height: 70px;
+    display: block;
+}
+.folderGroup__48112 {
+    width: 70px;
 }
 
 // increase clicking area
@@ -117,11 +102,6 @@
         display: none;
     }
     
-}
-
-.folderHeader__48112 {
-    position: relative;
-    left: -12px;
 }
 
 // scale down icons back to normal
@@ -202,6 +182,7 @@
     height: 52px;
     top: 6px;
     left: 6px;
+    margin: auto;
     border: var(--nox-notification-width) solid transparent;
     border-radius: 50%;
     opacity: 0.7;
@@ -222,7 +203,7 @@ ul[id*=folder-items] .wrapper_cc5dd2::after {
 }
 
 // prevent hover highlight for open folder icon
-.wrapper__48112 > :not(.collapsed__48112) + .listItem__650eb .wrapper_cc5dd2::after {
+.folderGroup__48112.isExpanded__48112 .folderButton__48112 .wrapper_cc5dd2::after {
     content: none
 }
 
@@ -286,17 +267,17 @@ ul[id*=folder-items] {
 }
 
 // material icon
-.folderGroup__48112 svg path {
+.folderIcon__48112 svg path {
     d: path("M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z");
 }
 
 // material icon hover/open
-.folderGroup__48112.hover__48112 svg path {
+.folderIcon__48112:hover svg path {
     d: path("M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z");
 }
 
 // make material icon bigger
-.folderGroup__48112 svg {
+.folderIcon__48112 svg {
     height: 32px;
     width: 32px;
 }
