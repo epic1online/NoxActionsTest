@@ -1,12 +1,18 @@
 // Search Bar
-.privateChannels__35e86 .searchBarComponent__35e86{
+.privateChannels__35e86 .button__201d5.button__201d5 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
     font-size: 0;
+    border: none;
+    min-width: unset;
     background: none;
 }
 
 .privateChannels__35e86 .searchBar__35e86 {
     position: absolute;
-    bottom: 15px;
+    bottom: calc(var(--custom-app-panels-height, 0) + 15px);
     right: 10px;
     width: 50px;
     height: 50px;

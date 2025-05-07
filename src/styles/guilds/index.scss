@@ -4,6 +4,8 @@
     width: 70px;
     background: var(--nox-level1) !important;
     box-shadow: $elevation-shadow;
+    // margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 8px); // bottom spacing for account container
+    margin-bottom: 0;
 }
 
 // Remove gap between servers
@@ -33,6 +35,9 @@
 }
 
 // Separator
+#guild-list-unread-dms + .listItem__650eb {
+    height: min-content;
+}
 .guildSeparator__252b6.guildSeparator__252b6 {
     background: var(--nox-white1);
 }
@@ -61,7 +66,6 @@
 // Allow smaller border radii
 .listItem__650eb .svg_cc5dd2 foreignObject {
     mask: none;
-    transform: translateX(-4px) translateY(-4px) scale(calc(70/60));
 }
 
 // remove margin between servers
@@ -74,6 +78,10 @@
 .folderGroup__48112 {
     width: 70px;
 }
+.folderButton__48112 {
+    width: 70px;
+    height: 70px;
+}
 
 // increase clicking area
 .listItem__650eb .svg_cc5dd2 {
@@ -85,7 +93,8 @@
 }
 
 // allow dragging to work properly
-.wrapper_d144f8 {
+.wrapper_d144f8,
+.target_d144f8 {
     z-index: $guilds-elevation;
 }
 
@@ -107,9 +116,14 @@
 // scale down icons back to normal
 .wrapper__6e9f8 .childWrapper__6e9f8, // home icon
 .wrapper__6e9f8 .acronym__6e9f8, // iconless servers
+.circleIconButton__5bc7e { // add server and discovery
+    transform: scale(calc(48/60));
+    border-radius: 50%;
+}
 .folderGroup__48112 .folderPreviewWrapper__48112, // folders
-.circleIconButton__5bc7e, // add server and discovery
-.wrapper__6e9f8 .icon__6e9f8 {
+.wrapper__6e9f8 .icon__6e9f8 { // regular servers
+    width: 48px;
+    height: 48px;
     transform: scale(calc(48/70));
     border-radius: 50%;
 }

@@ -1,10 +1,14 @@
-.panels_c48ade {
+.panels_c48ade.panels_c48ade {
     background: var(--nox-level3);
+    border: none;
+    border-radius: 0;
+    bottom: 0;
+    left: 70px;
+    width: calc(100% - 70px);
 
     .container__37e49 {
         background: none;
         height: 64px;
-        padding-bottom: 0;
     }
     
     .hoverRoll__0263c {

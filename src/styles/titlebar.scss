@@ -1,9 +1,4 @@
-.wordmark__421ed {
-    padding: 0;
-    font-size: 12px;
-}
-
-.wordmark__421ed::before {
+.leading_c38106::before {
     content: "";
     display: block;
     width: 70px;
@@ -15,15 +10,7 @@
     background-size: contain;
 }
 
-.wordmark__421ed svg {
-    display: none;
-}
-
-.titleBar__421ed {
-    background: #191919 !important;
-}
-
-.typeWindows__421ed {
-    margin-top: 0;
-    padding-top: 4px;
+.bar_c38106 {
+    background: #191919;
+    padding-left: 0;
 }

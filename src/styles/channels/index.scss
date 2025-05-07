@@ -1,8 +1,9 @@
 // Remove rounded corner at top left of channel list and allow shadow
-.platform-win .sidebar_c48ade {
+.platform-win .sidebarList_c48ade {
     z-index: $channels-elevation;
     overflow: visible;
     border-radius: 0;
+    border: none;
     box-shadow: $elevation-shadow;
 }
 
@@ -103,9 +104,9 @@
 }
 
 // Private channels
-.privateChannels__35e86,
 .theme-dark .scroller__99e7c {
     background: var(--nox-level2);
+    margin-bottom: calc(var(--custom-app-panels-height, 0));
 }
 
 .interactive_bf202d:hover {
