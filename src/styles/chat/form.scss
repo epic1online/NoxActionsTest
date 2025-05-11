@@ -1,4 +1,4 @@
-.form_f75fb0 {
+.form_f75fb0.form_f75fb0 {
     background: none;
     padding: 0;
     &:not(:has(.hasStackedBar__74017)) {
@@ -19,19 +19,25 @@
     border-radius: 0;
 }
 
-.channelAppLauncher_e6e74f {
-    margin: 0;
-    .button_e6e74f {
-        height: 64px;
-        border-radius: 0;
-        background: var(--nox-level1-5);
-    }
+// fix height
+.buttons__74017,
+.attachWrapper__0923f,
+.attachButton__0923f.attachButton__0923f,
+.channelBottomBarArea_f75fb0 .textArea__74017 {
+    height: 44px !important;
+    min-height: 0;
+}
+.channelBottomBarArea_f75fb0 .slateTextArea_ec4baf.slateTextArea_ec4baf {
+    min-height: 0;
+    padding: 0;
+}
+.slateContainer_ec4baf {
+    align-content: center;
 }
 
 // reply bar
-.stackedBars__74017 {
+.stackedBars__74017.stackedBars__74017 {
     background: var(--nox-level2);
-    width: calc(100% + 44px);
     border-radius: 8px 8px 0 0;
 }
 
@@ -40,13 +46,15 @@
     z-index: 1;
 }
 
-.channelTextArea_f75fb0 {
+.channelTextArea_f75fb0.channelTextArea_f75fb0 {
     background: none;
+    border: none;
     margin: 0;
 }
 
-.placeholder__1b31f {
+.placeholder__1b31f.placeholder__1b31f {
     color: var(--nox-white3);
+    padding: 0;
 }
 
 .typing_b88801 {
@@ -54,7 +62,7 @@
     color: var(--nox-white);
     bottom: 100%;
     padding: 0 20px;
-    margin-left: 15px;
+    // margin-left: 15px;
     border-radius: 5px 5px 0 0;
     opacity: 0.95;
     transition: opacity 200ms ease
@@ -79,6 +87,7 @@
 // removes gap above edit box
 .channelTextArea__5126c {
     margin-top: 0;
+    border-radius: 0;
 }
 
 // edit box bg

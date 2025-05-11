@@ -3,27 +3,27 @@
     border: none;
 }
 
-.container__133bf,
-.container__7d20c {
+.tabBody__133bf.tabBody__133bf {
     background: var(--nox-level1);
 }
 
 // toolbar
-.icon__9293f {
+.icon__9293f.icon__9293f {
     color: var(--nox-white4);
 }
 .title__9293f {
     color: var(--nox-white7);
 }
-.tabBar__133bf .item__133bf.item__133bf.selected_b3f026,
-.tabBar__133bf .item__133bf.item__133bf.selected_b3f026:hover
+.tabBar__133bf .item__133bf.item__133bf.item__133bf.selected_b3f026,
+.tabBar__133bf .item__133bf.item__133bf.item__133bf.item__133bf.selected_b3f026:hover
  {
     background-color: var(--nox-white1);
 }
-.themed_b3f026.item__133bf {
+.themed_b3f026.item__133bf.item__133bf {
     color: var(--nox-white4);
+    border-radius: 4px;
 }
-.themed_b3f026.item__133bf:hover {
+.themed_b3f026.item__133bf.item__133bf:hover {
     color: var(--nox-white6);
 }
 .tabBar__133bf .themed_b3f026.item__133bf:hover:not(.disabled_b3f026):not(.addFriend__133bf) {
@@ -33,54 +33,58 @@
 .item__133bf.selected_b3f026:hover {
     color: var(--nox-white9);
 }
-.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf,
-.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf:hover {
+.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf.addFriend__133bf,
+.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf.addFriend__133bf:hover {
     background-color: var(--nox-accent);
     color: var(--nox-white9);
 }
-.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf[aria-selected=true],
-.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf[aria-selected=true]:hover {
+.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf.addFriend__133bf[aria-selected=true],
+.tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf.addFriend__133bf[aria-selected=true]:hover {
     background-color: transparent;
     color: var(--nox-accent);
 }
 
 // search bar
-.searchBar__5ec2f {
-    margin-left: 20px;
-    margin-right: 25px;
+.searchBar__5ec2f.searchBar__5ec2f {
+    margin-right: 24px;
     background: var(--nox-level3);
+    border-radius: 4px;
 }
-.input__48d49 {
+.input_a45028 {
     color: var(--nox-white6);
 }
-.input__48d49::placeholder {
+.input_a45028::placeholder {
     color: var(--nox-white3);
 }
-.icon_fb52f0 {
+.icon_a45028 {
     color: var(--nox-white4);
 }
-.iconLayout__67261:hover .clear__9f79a {
+.iconLayout_a45028:hover .clear_a45028 {
     color: var(--nox-white9);
 }
 
 // friend list
-.peopleListItem_cc6179 {
+.peopleListItem_cc6179.peopleListItem_cc6179.peopleListItem_cc6179 {
     margin: 0 10px 0 20px;
     padding: 16px 10px;
     // border-radius: 0;
-    border-top: none;
+    border: none;
     background-color: rgba(0,0,0,.1);
 }
-.peopleListItem_cc6179:hover {
+.peopleListItem_cc6179.peopleListItem_cc6179:hover {
     // margin-bottom: 16px;
     border-radius: 0;
     background: rgba(255, 255, 255, 0.03);
 }
-.peopleListItem_cc6179:nth-child(2) {
+.sectionTitle__5ec2f+.peopleListItem_cc6179 {
     border-radius: 4px 4px 0 0;
 }
 .peopleListItem_cc6179:last-child {
     border-radius: 0 0 4px 4px;
+}
+
+.avatar__0a06e {
+align-self: center;
 }
 .title__1472a,
 .username__0a06e {
@@ -101,13 +105,18 @@
 }
 
 // activity section
-.scroller__7d20c {
+.nowPlayingColumn__133bf,
+.container__7d20c {
+    background: none;
+}
+
+.scroller__7d20c.scroller__7d20c {
     border-left-color: rgba(255, 255, 255, 0.05);
 }
-.scroller__7d20c .defaultColor_e9e35f {
+.scroller__7d20c .defaultColor__4bd52 {
     color: var(--nox-white7);
 }
-.itemCard__7e549 {
+.itemCard__7e549.itemCard__7e549 {
     border: none;
     background-color: var(--nox-black4);
     border-radius: 4px;
@@ -115,7 +124,7 @@
 .body__00943.body__00943 {
     background: none;
 }
-.section__00943 {
+.section__00943.section__00943 {
     background-color: var(--nox-white1);
 }
 .section__00943:first-child {
@@ -130,10 +139,10 @@
 .theme-dark .outer_bf1984.interactive_bf1984:hover {
     background-color: var(--nox-black2);
 }
-.itemCard__7e549 .defaultColor__77578 {
+.itemCard__7e549 .defaultColor__4bd52 {
     color: var(--nox-white6);
 }
-.itemCard__7e549 .text-sm-normal__95a78.textContent__00943 {
+.itemCard__7e549 .text-sm\/normal_cf4812.textContent__00943 {
     color: var(--nox-white4) !important;
 }
 .section__00943 .textContent__00943 {

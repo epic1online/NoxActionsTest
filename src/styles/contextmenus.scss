@@ -2,6 +2,8 @@
 .menu_c1e9c4 {
     box-shadow: none;
     background: none;
+    border: none;
+    overflow: visible;
     border-radius: 2px;
     padding: 0 8px;
 }
@@ -60,11 +62,11 @@
 
     // quick reacts
     .wrapper_f563df {
-        padding: 6px 4px 6px 6px;
+        padding: 6px;
     }
     .button_f563df {
         background-color: rgba(225, 225, 225, 0.05);
-        padding: 2px;
+        border-radius: 50%;
 
         &:hover {
             background-color: rgba(225, 225, 225, 0.07);
