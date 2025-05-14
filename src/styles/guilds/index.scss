@@ -42,6 +42,11 @@
     background: var(--nox-white1);
 }
 
+// Remove move down on click
+.listItemWrapper__91816:active {
+    transform: none;
+}
+
 // recolor closed folders
 .folderPreviewWrapper__48112.folderPreviewWrapper__48112 {
     background: var(--nox-white2);

@@ -22,10 +22,13 @@
 // fix height
 .buttons__74017,
 .attachWrapper__0923f,
-.attachButton__0923f.attachButton__0923f,
-.channelBottomBarArea_f75fb0 .textArea__74017 {
+.attachButton__0923f.attachButton__0923f {
     height: 44px !important;
     min-height: 0;
+    align-self: center;
+}
+.channelBottomBarArea_f75fb0 .textArea__74017 {
+    align-self: center;
 }
 .channelBottomBarArea_f75fb0 .slateTextArea_ec4baf.slateTextArea_ec4baf {
     min-height: 0;
