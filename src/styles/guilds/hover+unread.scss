@@ -1,0 +1,77 @@
+// blanks pill item
+.listItem__650eb .item__58105 {
+    box-sizing: border-box;
+    background: none;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// set up hover/active/selected bg
+.wrapper_cc5dd2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    z-index: -1;
+}
+
+// hover bg
+.wrapper_cc5dd2:hover::after {
+    background: var(--nox-white1);
+}
+
+// active bg
+.wrapper_cc5dd2:active::after,
+.listItem__650eb:has(.item__58105[style="opacity: 1; height: 40px; transform: none;"]) .wrapper_cc5dd2::after {
+    background: var(--nox-black2);
+}
+
+// set up unread circle
+.wrapper_cc5dd2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    top: 6px;
+    left: 6px;
+    margin: auto;
+    border: var(--nox-notification-width) solid transparent;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+// unread
+.listItem__650eb:has(.item__58105[style="opacity: 1; height: 8px; transform: none;"]) .wrapper_cc5dd2::before {
+    border-color: var(--nox-notification-color);
+}
+
+// change hover/active/selected background for folders
+ul[id*=folder-items] .wrapper_cc5dd2::after {
+    width: 60px;
+    left: 5px;
+}
+
+// prevent hover highlight for open folder icon
+.folderGroup__48112.isExpanded__48112 .folderButton__48112 .wrapper_cc5dd2::after {
+    content: none
+}
+.folderIcon__48112.folderIcon__48112:hover {
+    background: none;
+}
+
+//  folder material icon hover/open
+.folderIcon__48112:hover svg path {
+    d: path("M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z");
+}
+
+// last item in folder hover
+ul[id*=folder-items] .listItem__650eb:last-child .wrapper_cc5dd2::after {
+    border-radius: 0 0 30px 30px;
+    height: 62px;
+}
+

@@ -1,239 +1,189 @@
 // Guild list bg color
 .guilds_c48ade.guilds_c48ade {
     z-index: $guilds-elevation;
-    width: 70px;
-    background: var(--nox-level1) !important;
+    margin: 0;
+    background: var(--nox-level1);
     box-shadow: $elevation-shadow;
-    // margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 8px); // bottom spacing for account container
-    margin-bottom: 0;
 }
 
-// Remove gap between servers
-.guilds_c48ade .stack_dbd263 {
-    gap: 0 !important;
+// set width correctly width
+.guilds_c48ade.guilds_c48ade, //list
+.listItem__650eb, //servers
+.folderGroup__48112, // folders
+.unreadMentionsIndicatorBottom_ef3116, // unreadmentions
+.unreadMentionsIndicatorTop_ef3116 { // unreadmentions
+    //folders
+    width: 70px;
 }
 
-// Remove existing color and padding
+// fix spacing on folder bg
+.folderGroupBackground__48112 {
+    left: 0;
+    right: 0;
+    justify-self: center;
+}
+// fix folder height
+ul[id*=folder-items] {
+    height: auto !important;
+}
+
+// reset scroller
 .guilds_c48ade .scroller_ef3116 {
-    background: transparent;
     padding: 0;
+    gap: 0 !important;
     height: 100%;
 }
 
-// Hide scroller
-.guilds_c48ade .scroller_ef3116::-webkit-scrollbar {
-    width: 0 !important;
-}
-
-// Fix weird spacing between home icon and guild list
+// prevent overlap of homeicon and servers
 .tutorialContainer__1f388 + .stack_dbd263 {
     margin-top: 0;
 }
 
-.tutorialContainer__1f388 + .stack_dbd263 + .listItem__650eb {
-    display: flex;
-}
-
-// Separator
-#guild-list-unread-dms + .listItem__650eb {
-    height: min-content;
-}
-.guildSeparator__252b6.guildSeparator__252b6 {
-    background: var(--nox-white1);
-}
-
-// Remove move down on click
-.listItemWrapper__91816:active {
-    transform: none;
+// remove gap between servers
+.stack_dbd263[aria-label="Servers"] {
+    gap: 0 !important;
 }
 
 // recolor closed folders
 .folderPreviewWrapper__48112.folderPreviewWrapper__48112 {
     background: var(--nox-white2);
-    width: 48px;
-    height: 48px;
     .folderPreviewGuildIcon__48112 {
         border-radius: 50% !important;
     }
 }
 
+// folder color to accent
+.folderIcon__48112 {
+    color: var(--nox-accent) !important;
+}
+
 // recolor open folders and shape them
 .folderGroupBackground__48112.folderGroupBackground__48112 {
     background: var(--nox-white1) !important;
-    bottom: 8px;
     padding: 6px;
-    left: 5px;
+    bottom: 8px;
+    width: 48px;
     border-radius: 16px 16px 30px 30px;
     box-sizing: content-box;
     border: 0;
 }
 
-// Allow smaller border radii
+// recolor guild separator
+.guildSeparator__252b6.guildSeparator__252b6 {
+    background: var(--nox-white1);
+}
+
+// unset height for guild separator
+#guild-list-unread-dms+.listItem__650eb {
+    height: unset;
+}
+
+// increase clicking area servers
+.wrapper_cc5dd2 {
+    width: 70px !important;
+    height: 70px !important;
+}
+.svg_cc5dd2 {
+    width: 70px;
+    height: 70px;
+    left: 0;
+    top: 0;
+}
 .listItem__650eb .svg_cc5dd2 foreignObject {
+    width: 52px;
+    height: 52px;
+    transform: translate(-4px, -4px);
     mask: none;
 }
+.wrapper__6e9f8 {
+    width: 52px;
+    height: 52px;
+}
+// scale icon back down
+.icon__6e9f8 {
+    transform: scale(calc((48*52)/(70*44)));
+    border-radius: 50%;
+}
 
-// remove margin between servers
-.listItem__650eb {
-    // margin-bottom: 0;
+// increase clicking area folder
+.folderHeader__48112 {
+    margin: 0;
     width: 70px;
     height: 70px;
-    display: block;
 }
-.folderGroup__48112 {
-    width: 70px;
-}
-.folderButton__48112 {
+.folderButton__48112.folderButton__48112 {
     width: 70px;
     height: 70px;
+    padding: 0;
     border-radius: 0;
 }
-
-// increase clicking area
-.listItem__650eb .svg_cc5dd2 {
-    height: 70px;
-    width: 70px;
-    top: 0;
-    left: 0;
-    z-index: $guilds-elevation;
+.folderButton__48112 .svg_cc5dd2 foreignObject {
+    width: 44px;
+    height: 44px;
+    transform: none;
 }
-
-// allow dragging to work properly
-.wrapper_d144f8,
-.target_d144f8 {
-    z-index: $guilds-elevation;
-}
-
-// increase wrapper size and center servers
-.listItem__650eb .wrapper_cc5dd2 {
-    height: 70px !important;
-    width: 70px !important;
-    border-radius: unset;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .svg_cc5dd2 rect { // scale down badge masks
-        display: none;
-    }
-    
-}
-
-// scale down icons back to normal
-.wrapper__6e9f8 .childWrapper__6e9f8, // home icon
-.wrapper__6e9f8 .acronym__6e9f8, // iconless servers
-.circleIconButton__5bc7e { // add server and discovery
-    transform: scale(calc(48/60));
-    border-radius: 50%;
-}
-.folderGroup__48112 .folderPreviewWrapper__48112, // folders
-.wrapper__6e9f8 .icon__6e9f8 { // regular servers
-    width: 48px;
-    height: 48px;
+// scale icons back down
+// .folderIconWrapper__48112 {
+//     transform: scale(calc(48/70));
+// }
+.folderPreviewWrapper__48112.folderPreviewWrapper__48112 {
     transform: scale(calc(48/70));
     border-radius: 50%;
+    overflow: hidden;
 }
 
-// fix spacing after unread dm circle
-.scroller_ef3116 div[style="opacity: 1; height: 40px; transform: scale(1);"] {
-    height: 70px !important;
+// remove gap between servers in folder
+.folderGuildsList__48112 {
+    gap: 0 !important;
 }
 
 // Home button and circle buttons
-.childWrapper__6e9f8,
+.childWrapper__6e9f8.childWrapper__6e9f8.childWrapper__6e9f8,
 .circleIconButton__5bc7e {
-    background-color: var(--nox-level2) !important;
+    background-color: var(--nox-level2);
+    border-radius: 50%;
+    transform: scale(calc((48*52)/(70*44)));
+}
+
+// center text on iconless servers
+.acronym__6e9f8 {
+    line-height: unset;
+}
+
+.circleIconButton__5bc7e {
+    translate: 4px 4px;
+    color: var(--nox-accent);
 }
 
 // change blurple to accent bg
 .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8, // home icon and iconless guilds
-.circleIconButton__5bc7e.selected__5bc7e { // add server and discovery
-    background-color: var(--nox-accent) !important;
+.circleIconButton__5bc7e.circleIconButton__5bc7e.circleIconButton__5bc7e.selected__5bc7e { // add server and discovery
+    background-color: var(--nox-accent);
 }
 
-// discovery and add server change blurple to accent
-.circleIconButton__5bc7e {
-    color: var(--nox-accent);
+// remove server icon background
+.icon__6e9f8:before {
+    content: none;
 }
 
-// blanks pill item
-.listItem__650eb .item__58105 {
-    box-sizing: border-box;
-    background: none;
-    margin: 0;
-    width: 100%;
-    height: 100%;
+.folderGroup__48112.isExpanded__48112>.listItem__650eb {
+    height: 60px;
 }
 
-// set up hover/active/selected bg
-.wrapper_cc5dd2::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: none;
-    z-index: 0;
+// folder material icon
+.folderIcon__48112 svg path {
+    d: path("M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z");
 }
 
-// hover bg
-.wrapper_cc5dd2:hover::after {
-    background: var(--nox-white1);
+// make material icon bigger
+.folderIcon__48112 svg {
+    scale: (calc((48*44)/(70*18)));
 }
 
-// active bg
-.wrapper_cc5dd2:active::after {
-    background: var(--nox-black2);
-}
-
-.selected_e5445c .wrapper_cc5dd2::after,
-.selected_dfb2f8 .wrapper_cc5dd2::after,
-.listItem__650eb:has(.item__58105[style="opacity: 1; height: 40px; transform: none;"]) .wrapper_cc5dd2::after {
-    background: var(--nox-black2);
-}
-
-// set up unread circle
-.wrapper_cc5dd2::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 52px;
-    height: 52px;
-    top: 6px;
-    left: 6px;
-    margin: auto;
-    border: var(--nox-notification-width) solid transparent;
-    border-radius: 50%;
-    opacity: 0.7;
-    z-index: 2;
-}
-
-.listItem__650eb:has(.item__58105[style="opacity: 1; height: 8px; transform: none;"]) .wrapper_cc5dd2::before {
-    border-color: var(--nox-notification-color);
-}
-
-
-// TODO might move to another file Server folder stuff
-
-// change hover/active/selected background for folders
-ul[id*=folder-items] .wrapper_cc5dd2::after {
-    width: 60px;
-    left: 5px;
-}
-
-// prevent hover highlight for open folder icon
-.folderGroup__48112.isExpanded__48112 .folderButton__48112 .wrapper_cc5dd2::after {
-    content: none
-}
-
-ul[id*=folder-items] .listItem__650eb:last-child .wrapper_cc5dd2::after {
-    border-radius: 0 0 30px 30px;
-    height: 62px;
-}
-
-ul[id*=folder-items] {
-    height: auto !important;
+// dragging position indicator green to accent
+.centerTarget_d144f8.dragOver_d144f8:before, // combine server
+.target_d144f8.dragOver_d144f8:before { // above server
+	background-color: var(--nox-accent);
 }
 
 
@@ -272,51 +222,4 @@ ul[id*=folder-items] {
 // recolor ping icon
 .numberBadge__40d6f {
     background-color: var(--nox-important-notification) !important;
-}
-
-// TODO Will move to separate file
-
-// folder color to accent
-.folderIcon__48112 {
-    color: var(--nox-accent) !important;
-}
-
-// remove icon highlight on hover
-.folderIcon__48112:hover {
-    background: none;
-}
-
-// material icon
-.folderIcon__48112 svg path {
-    d: path("M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z");
-}
-
-// material icon hover/open
-.folderIcon__48112:hover svg path {
-    d: path("M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z");
-}
-
-// make material icon bigger
-.folderIcon__48112 svg {
-    height: 32px;
-    width: 32px;
-}
-
-// enlarge drag placeholder wrapper
-.placeholderMask__87847 {
-    width: 70px;
-    height: 70px;
-}
-
- // color and scale icon back down
-.dragInner__87847 {
-    background-color: var(--nox-black3);
-    border-radius: 50%;
-    transform: scale(calc(48/70));
-}
-
-// dragging position indicator green to accent
-.centerTarget_d144f8.dragOver_d144f8:before, // combine server
-.target_d144f8.dragOver_d144f8:before { // above server
-	background-color: var(--nox-accent);
 }
