@@ -12,7 +12,6 @@
 .folderGroup__48112, // folders
 .unreadMentionsIndicatorBottom_ef3116, // unreadmentions
 .unreadMentionsIndicatorTop_ef3116 { // unreadmentions
-    //folders
     width: 70px;
 }
 
@@ -39,9 +38,20 @@ ul[id*=folder-items] {
     margin-top: 0;
 }
 
-// remove gap between servers
-.stack_dbd263[aria-label="Servers"] {
+// make dms same height as servers
+#guild-list-unread-dms>div[style^="opacity: 1"] {
+    height: 70px !important;
+}
+
+// remove gap between servers, and dms
+.stack_dbd263[aria-label="Servers"],
+#guild-list-unread-dms {
     gap: 0 !important;
+}
+
+// remove move down on click
+.listItemWrapper__91816:active {
+    transform: none;
 }
 
 // recolor closed folders
@@ -222,4 +232,11 @@ ul[id*=folder-items] {
 // recolor ping icon
 .numberBadge__40d6f {
     background-color: var(--nox-important-notification) !important;
+}
+
+.blobContainer_e5445c.blobContainer_e5445c[data-drop-hovering=true] {
+    background-color: transparent;
+    border-color: var(--nox-accent);
+    border-radius: 50%;
+    animation: none;
 }
