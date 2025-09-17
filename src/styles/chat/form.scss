@@ -1,6 +1,8 @@
 .form_f75fb0.form_f75fb0.form_f75fb0 {
     background: none;
     padding: 0;
+    margin-top: 0;
+
     &:not(:has(.hasStackedBar__74017)) {
         box-shadow: $elevation-shadow;
     }
@@ -15,7 +17,7 @@
     // max-height: 400px!important;
     // overflow-y: scroll!important;
     background: var(--nox-level1-5);
-    padding: 10px 0 10px 0;
+    // padding: 10px 0 10px 0;
     border-radius: 0;
 }
 
@@ -29,14 +31,21 @@
     top: 0;
     bottom: 0;
 }
+
+.attachWrapper__0923f.attachWrapper__0923f {
+    padding: 10px;
+}
+
 .channelBottomBarArea_f75fb0 .textArea__74017 {
     min-height: 0;
     align-self: center;
 }
+
 .channelBottomBarArea_f75fb0 .slateTextArea_ec4baf.slateTextArea_ec4baf {
     min-height: 0;
     padding: 0;
 }
+
 .slateContainer_ec4baf {
     align-content: center;
 }

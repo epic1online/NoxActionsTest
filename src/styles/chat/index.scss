@@ -1,6 +1,14 @@
 .chat_f75fb0 .messagesWrapper__36d07 {
     background: var(--nox-level1);
-    margin-bottom: 4px;
+    // margin-bottom: 4px;
+}
+
+.chatGradient__36d07 {
+    display: none;
+}
+
+.scrollerSpacer__36d07.scrollerSpacer__36d07 {
+    height: 24px;
 }
 
 // message loading placeholder
@@ -54,9 +62,10 @@
 .markup__75297 code.inline {
     border-radius: 2px;
 }
+
 .after_inlineCode_ada32f,
 .before_inlineCode_ada32f,
-.inlineCode_ada32f{
+.inlineCode_ada32f {
     background: var(--nox-level2);
 }
 
