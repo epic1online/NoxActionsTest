@@ -1,3 +1,5 @@
+@use "../../elevations";
+
 .members_c8ffbb,
 // .members_c8ffbb > div,
 .member__5d473 {
@@ -6,8 +8,8 @@
 }
 
 .container_c8ffbb {
-    z-index: $channels-elevation;
-    box-shadow: $elevation-shadow;
+    z-index: elevations.$channels-elevation;
+    box-shadow: elevations.$elevation-shadow;
     background: var(--nox-level2);
     border: none;
 }

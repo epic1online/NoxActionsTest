@@ -1,10 +1,12 @@
+@use "../../elevations";
+
 // Remove rounded corner at top left of channel list and allow shadow
 .platform-win .sidebarList_c48ade {
-    z-index: $channels-elevation;
+    z-index: elevations.$channels-elevation;
     overflow: visible;
     border-radius: 0;
     border: none;
-    box-shadow: $elevation-shadow;
+    box-shadow: elevations.$elevation-shadow;
 }
 
 // Main channel list container

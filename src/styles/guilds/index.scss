@@ -1,9 +1,11 @@
+@use "../../elevations";
+
 // Guild list bg color
 .guilds_c48ade.guilds_c48ade {
-    z-index: $guilds-elevation;
+    z-index: elevations.$guilds-elevation;
     margin: 0;
     background: var(--nox-level1);
-    box-shadow: $elevation-shadow;
+    box-shadow: elevations.$elevation-shadow;
 }
 
 // set width correctly width
@@ -208,7 +210,7 @@ ul[id*=folder-items] {
     height: 48px;
     display: flex;
     justify-content: flex-end;
-    z-index: calc($guilds-elevation + 1);
+    z-index: calc(elevations.$guilds-elevation + 1);
 }
 
 .lowerBadge_cc5dd2 {

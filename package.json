@@ -4,27 +4,28 @@
   "description": "Dark material theme for Discord.",
   "main": "src/index.scss",
   "dependencies": {
-    "sass": "^1.54.8"
+    "sass": "^1.92.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp sass",
     "watch": "gulp sass-watch",
-    "import": "gulp import"
+    "import": "gulp import",
+    "lint": "stylelint \"src/**/*.scss\" --config \".stylelintrc.json\""
   },
   "author": "Lilian Tedone & Zack Rauen",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^4.0.2",
+    "glob": "^11.0.3",
+    "gulp": "^5.0.1",
     "gulp-insert": "^0.5.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.1.0",
+    "gulp-rename": "^2.1.0",
+    "gulp-sass": "^6.0.1",
     "gulp-wait": "0.0.2",
-    "node-sass-glob-importer": "^5.3.2",
-    "stylelint": "^14.11.0",
-    "stylelint-config-property-sort-order-smacss": "^9.0.0",
-    "stylelint-config-sass-guidelines": "^9.0.1",
-    "stylelint-order": "^5.0.0"
+    "stylelint": "^16.24.0",
+    "stylelint-config-property-sort-order-smacss": "^10.0.0",
+    "stylelint-config-sass-guidelines": "^12.1.0",
+    "stylelint-order": "^7.0.0"
   },
   "repository": {
     "type": "git",

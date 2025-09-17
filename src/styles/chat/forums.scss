@@ -1,3 +1,5 @@
+@use "../../elevations";
+
 // main bg
 .container_f369db {
     background: var(--nox-level1);
@@ -213,7 +215,7 @@
 .newPostsButton_f369db {
     background-color: var(--nox-accent);
     border: none;
-    box-shadow: $elevation-shadow;
+    box-shadow: elevations.$elevation-shadow;
     height: unset;
     padding: 0;
 

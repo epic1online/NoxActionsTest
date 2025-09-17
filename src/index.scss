@@ -1,3 +1,5 @@
+@use "elevations.scss";
+@use "../tmp";
 // // White
 // $white0: rgba(255,255,255,0);
 // $white1: rgba(255,255,255,.1);
@@ -119,5 +121,3 @@
 // @import "sections/*";
 // @import "settings/**/*.scss";
 /* stylelint-disable-next-line scss/at-import-partial-extension-blacklist */
-@import "./elevations.scss";
-@import "styles/**/*.scss";
