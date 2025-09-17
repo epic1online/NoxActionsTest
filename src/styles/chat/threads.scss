@@ -1,12 +1,12 @@
 // thread icon
 .iconContainer__235ca {
-    left: -85px;
     right: unset;
+    left: -85px;
 }
 
 .hasThread_c19a55.hasThread_c19a55 {
     // line pointing to thread    
-    &::after{
+    &::after {
         content: none;
     }
 
@@ -22,8 +22,8 @@
 
 // thread attachement box
 .systemMessageContainer__9271d {
-    background-color: var(--nox-level2);
     border-radius: 2px;
+    background-color: var(--nox-level2);
 
     // title
     .name__9271d {
@@ -43,7 +43,7 @@
 
 // remove top border
 .container__01ae2.container__01ae2 {
-    border: none;
+    border: 0;
 }
 
 .threadSidebarOpen_f75fb0.threadSidebarOpen_f75fb0,

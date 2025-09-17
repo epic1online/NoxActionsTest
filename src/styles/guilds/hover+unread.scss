@@ -1,10 +1,10 @@
 // blanks pill item
 .listItem__650eb .item__58105 {
     box-sizing: border-box;
-    background: none;
-    margin: 0;
     width: 100%;
     height: 100%;
+    margin: 0;
+    background: none;
 }
 
 // set up hover/active/selected bg
@@ -12,11 +12,11 @@
     content: "";
     display: block;
     position: absolute;
+    z-index: -1;
     top: 0;
     width: 100%;
     height: 100%;
     background: none;
-    z-index: -1;
 }
 
 // hover bg
@@ -35,10 +35,10 @@
     content: "";
     display: block;
     position: absolute;
-    width: 52px;
-    height: 52px;
     top: 6px;
     left: 6px;
+    width: 52px;
+    height: 52px;
     margin: auto;
     border: var(--nox-notification-width) solid transparent;
     border-radius: 50%;
@@ -52,13 +52,13 @@
 
 // change hover/active/selected background for folders
 ul[id*=folder-items] .wrapper_cc5dd2::after {
-    width: 60px;
     left: 5px;
+    width: 60px;
 }
 
 // prevent hover highlight for open folder icon
 .folderGroup__48112.isExpanded__48112 .folderButton__48112 .wrapper_cc5dd2::after {
-    content: none
+    content: none;
 }
 .folderButton__48112:focus .folderIcon__48112.folderIcon__48112,
 .folderIcon__48112.folderIcon__48112:hover {
@@ -72,7 +72,7 @@ ul[id*=folder-items] .wrapper_cc5dd2::after {
 
 // last item in folder hover
 ul[id*=folder-items] .listItem__650eb:last-child .wrapper_cc5dd2::after {
-    border-radius: 0 0 30px 30px;
     height: 62px;
+    border-radius: 0 0 30px 30px;
 }
 

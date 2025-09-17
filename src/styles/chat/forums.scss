@@ -16,16 +16,16 @@
 }
 
 .headerWithMatchingPosts_f369db {
-    border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 // search thing
 .matchingPostsRow_f369db {
-    background-color: var(--nox-level2);
-    width: 95%;
     align-self: center;
+    width: 95%;
     border-radius: 0 0 5px 5px;
+    background-color: var(--nox-level2);
     .clear_f369db {
         color: var(--nox-accent) !important;
     }
@@ -43,9 +43,9 @@
 
 // filters/tags
 .pill_a2c9e8 {
+    border: 0;
     border-radius: 6px;
     background-color: var(--nox-level2);
-    border: none;
     
     .text-xs-semibold__767f1,
     .text-sm-semibold_d260b0 {
@@ -53,7 +53,7 @@
     }
 
     &.pill_a2c9e8.pill_a2c9e8:hover {
-        background-color: rgba(255, 255, 255, .06);
+        background-color: rgba(255, 255, 255, 0.06);
     }
 
     &.selected_a2c9e8.selected_a2c9e8.selected_a2c9e8 {
@@ -64,9 +64,9 @@
 // card
 .mainCard_f369db,
 .loadingCard_f369db { // placeholder
-    background-color: rgba(0, 0, 0, 0.1);
-    border: none;
+    border: 0;
     border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .loadingCard-0_f369db,
@@ -81,7 +81,7 @@
 // hover
 .container_faa96b:hover {
     transform: none;
-    background-color: rgba(2, 2, 2, .2);
+    background-color: rgba(2, 2, 2, 0.2);
     box-shadow: initial;
 }
 
@@ -98,7 +98,7 @@
 
 // author
 .author_d3eee8.hasUnreads_d3eee8 .anchor_edefb8 {
-    color: var(--nox-white6)
+    color: var(--nox-white6);
 }
 
 .author_d3eee8 .anchor_edefb8 {
@@ -155,37 +155,37 @@
 }
 
 .messageListItem__5126c + .header__34c2c.header__34c2c {
-    background-color: transparent;
     justify-content: center;
+    background-color: transparent;
 }
 
 .container__34c2c {
-    background: none;
-    border: none;
-    margin: 0 0 0 16px;
-    width: calc(100% - 16px);
     box-sizing: border-box;
     justify-content: center;
+    width: calc(100% - 16px);
+    margin: 0 0 0 16px;
+    border: 0;
+    background: none;
 
     // when section is near top of screen
     &.header__34c2c {
-        box-shadow: none;
-        background-color: var(--nox-level2);
-        border-radius: 0 0 6px 6px;
         justify-content: space-between;
+        border-radius: 0 0 6px 6px;
+        background-color: var(--nox-level2);
+        box-shadow: none;
     }
 
-    .buttons__34c2c{
+    .buttons__34c2c {
         border-radius: 2px;
         gap: 16px;
     }
 
     .addReactButton__34c2c,
     .buttonInner__34c2c {
-        background-image: none;
-        background-color: var(--nox-white1);
+        border: 0;
         border-radius: 4px;
-        border: none;
+        background-color: var(--nox-white1);
+        background-image: none;
         color: var(--nox-white7);
 
         &:hover {
@@ -213,15 +213,15 @@
 
 // new posts button
 .newPostsButton_f369db {
-    background-color: var(--nox-accent);
-    border: none;
-    box-shadow: elevations.$elevation-shadow;
     height: unset;
     padding: 0;
+    border: 0;
+    background-color: var(--nox-accent);
+    box-shadow: elevations.$elevation-shadow;
 
     .text-md-medium_a84e09 {
-        color: var(--nox-white) !important;
         padding: 4px 16px;
+        color: var(--nox-white) !important;
         font-weight: 600;
     }
 }

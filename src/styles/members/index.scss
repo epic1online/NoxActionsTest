@@ -9,9 +9,9 @@
 
 .container_c8ffbb {
     z-index: elevations.$channels-elevation;
-    box-shadow: elevations.$elevation-shadow;
+    border: 0;
     background: var(--nox-level2);
-    border: none;
+    box-shadow: elevations.$elevation-shadow;
 }
 .container_cc72c1, // Role name
 .activity__5d473 {
@@ -19,8 +19,8 @@
 }
 
 .childContainer__91a9d {
-    border-radius: 4px;
     padding: 2px 8px;
+    border-radius: 4px;
 }
 
 .clickable__91a9d:hover .childContainer__91a9d { // hover on member

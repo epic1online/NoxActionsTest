@@ -2,12 +2,12 @@
 
 // outer menu
 .menu_c1e9c4 {
-    box-shadow: none;
-    background: none;
-    border: none;
-    overflow: visible;
-    border-radius: 2px;
     padding: 0 8px;
+    overflow: visible;
+    border: 0;
+    border-radius: 2px;
+    background: none;
+    box-shadow: none;
 }
 
 .menu_c1e9c4.submenu_c1e9c4 {
@@ -21,10 +21,10 @@
 
 // inner menu
 .scroller_c1e9c4 {
-    box-shadow: elevations.$elevation-shadow;
     padding: 0;
     overflow: hidden auto !important;
     background-color: var(--nox-level2);
+    box-shadow: elevations.$elevation-shadow;
 
     // menu items
     .item_c1e9c4 {
@@ -52,10 +52,10 @@
         }
 
         &.colorDanger_c1e9c4 {
-            color: #F04747;
+            color: #f04747;
 
             &.focused_c1e9c4 {
-                background-color: #F04747;
+                background-color: #f04747;
                 color: var(--nox-white9);
             }
         }
@@ -67,8 +67,8 @@
         padding: 6px;
     }
     .button_f563df {
-        background-color: rgba(225, 225, 225, 0.05);
         border-radius: 50%;
+        background-color: rgba(225, 225, 225, 0.05);
 
         &:hover {
             background-color: rgba(225, 225, 225, 0.07);

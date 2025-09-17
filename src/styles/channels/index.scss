@@ -4,8 +4,8 @@
 .platform-win .sidebarList_c48ade {
     z-index: elevations.$channels-elevation;
     overflow: visible;
+    border: 0;
     border-radius: 0;
-    border: none;
     box-shadow: elevations.$elevation-shadow;
 }
 
@@ -105,14 +105,14 @@
 .total__260e1 {
     background-color: var(--nox-level3);
 }
-.total__260e1:after {
+.total__260e1::after {
     border-right-color: var(--nox-level3);
 }
 
 // Private channels
 .theme-dark .scroller__99e7c {
-    background: var(--nox-level2);
     margin-bottom: calc(var(--custom-app-panels-height, 0));
+    background: var(--nox-level2);
 }
 
 .interactive_bf202d:hover {
@@ -123,8 +123,8 @@
 .interactiveSelected__972a0,
 .interactive_bf202d:hover.interactiveSelected__972a0,
 .interactive_bf202d:focus-within.interactiveSelected__972a0 {
-    color: var(--nox-white9);
     background: var(--nox-level3);
+    color: var(--nox-white9);
 }
 
 .interactive__972a0,

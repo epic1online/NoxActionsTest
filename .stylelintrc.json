@@ -4,15 +4,21 @@
         "stylelint-config-property-sort-order-smacss"
     ],
     "plugins": [
-		    "stylelint-order"
+        "stylelint-order"
     ],
     "rules": {
-        "indentation": [4, {"except": ["value"], "severity": "warning"}],
+        "@stylistic/indentation": [4, {"except": ["value"], "severity": "warning"}],
         "selector-type-case": ["lower", {"ignoreTypes": ["foreignObject"]}],
-        "no-missing-end-of-source-newline": null,
-        "string-quotes": "double",
+        "@stylistic/no-missing-end-of-source-newline": null,
+        "@stylistic/string-quotes": null,
         "selector-class-pattern": null,
         "selector-max-id": null,
-        "order/properties-alphabetical-order": null
+        "order/properties-alphabetical-order": null,
+        "max-nesting-depth": 2,
+        "function-url-quotes": null,
+        "selector-no-qualifying-type": null,
+        "selector-pseudo-element-no-unknown": null,
+        "scss/at-import-partial-extension-blacklist": null,
+        "rule-empty-line-before": null
       }
 }

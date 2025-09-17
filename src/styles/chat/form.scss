@@ -1,9 +1,9 @@
 @use "../../elevations";
 
 .form_f75fb0.form_f75fb0.form_f75fb0 {
-    background: none;
-    padding: 0;
     margin-top: 0;
+    padding: 0;
+    background: none;
 
     &:not(:has(.hasStackedBar__74017)) {
         box-shadow: elevations.$elevation-shadow;
@@ -16,22 +16,22 @@
 }
 
 .channelTextArea_f75fb0 .scrollableContainer__74017 {
+    // padding: 10px 0 10px 0;
+    border-radius: 0;
     // max-height: 400px!important;
     // overflow-y: scroll!important;
     background: var(--nox-level1-5);
-    // padding: 10px 0 10px 0;
-    border-radius: 0;
 }
 
 // fix height
 .buttons__74017,
 .attachWrapper__0923f,
 .attachButton__0923f.attachButton__0923f {
-    height: 44px;
-    min-height: 0;
-    align-self: center;
     top: 0;
     bottom: 0;
+    align-self: center;
+    height: 44px;
+    min-height: 0;
 }
 
 .attachWrapper__0923f.attachWrapper__0923f {
@@ -39,8 +39,8 @@
 }
 
 .channelBottomBarArea_f75fb0 .textArea__74017 {
-    min-height: 0;
     align-self: center;
+    min-height: 0;
 }
 
 .channelBottomBarArea_f75fb0 .slateTextArea_ec4baf.slateTextArea_ec4baf {
@@ -54,35 +54,35 @@
 
 // reply bar
 .stackedBars__74017.stackedBars__74017 {
-    background: var(--nox-level2);
     border-radius: 8px 8px 0 0;
+    background: var(--nox-level2);
 }
 
 .replyBar__841c8 {
-    background: none;
     z-index: 1;
+    background: none;
 }
 
 .channelTextArea_f75fb0.channelTextArea_f75fb0 {
-    background: none;
-    border: none;
     margin: 0;
+    border: 0;
+    background: none;
 }
 
 .placeholder__1b31f.placeholder__1b31f {
-    color: var(--nox-white3);
     padding: 0;
+    color: var(--nox-white3);
 }
 
 .typing_b88801 {
-    background: var(--nox-level2);
-    color: var(--nox-white);
     bottom: 100%;
     padding: 0 20px;
+    transition: opacity 200ms ease;
     // margin-left: 15px;
     border-radius: 5px 5px 0 0;
     opacity: 0.95;
-    transition: opacity 200ms ease
+    background: var(--nox-level2);
+    color: var(--nox-white);
 }
 
 .typing_b88801:hover {
@@ -109,8 +109,8 @@
 
 // edit box bg
 .channelTextArea__5126c .themedBackground__74017 {
-    background: var(--nox-level1-5);
     border-radius: 3px;
+    background: var(--nox-level1-5);
 }
 
 .button_aa63ab[disabled]>.innerButton_aa63ab>.buttonChild_aa63ab,
@@ -125,14 +125,14 @@
 .button_aa63ab.button_aa63ab:focus-within .activeButtonChild_aa63ab,
 .button_aa63ab.button_aa63ab:focus .activeButtonChild_aa63ab,
 .button_aa63ab.button_aa63ab:hover .activeButtonChild_aa63ab {
-    color: var(--nox-accent);
-    opacity: 0.6 !important;
     transition: opacity ease 300ms;
+    opacity: 0.6 !important;
+    color: var(--nox-accent);
 }
 
 .button_aa63ab.button_aa63ab:active .activeButtonChild_aa63ab {
-    color: var(--nox-accent);
     opacity: 1 !important;
+    color: var(--nox-accent);
 }
 
 .codeBlockText_ada32f,

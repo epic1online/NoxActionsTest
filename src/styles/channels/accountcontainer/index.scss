@@ -1,14 +1,14 @@
 .panels_c48ade.panels_c48ade {
-    background: var(--nox-level3);
-    border: none;
-    border-radius: 0;
     bottom: 0;
     left: 70px;
     width: calc(100% - 70px);
+    border: 0;
+    border-radius: 0;
+    background: var(--nox-level3);
 
     .container__37e49 {
-        background: none;
         height: 64px;
+        background: none;
     }
     
     .hoverRoll__0263c {
@@ -27,23 +27,23 @@
         }
     }
     
-    .avatarWrapper__37e49:after {
+    .avatarWrapper__37e49::after {
         content: "";
         display: block;
         position: absolute;
         width: 120px;
         height: 40px;
-        background: var(--nox-white);
+        transition: 300ms ease;
         border-radius: 32px;
         opacity: 0;
-        transition: 300ms ease;
+        background: var(--nox-white);
         pointer-events: none;
     }
     
-    .avatarWrapper__37e49:active:after {
-        opacity: 0.1;
-        animation: scale 200ms cubic-bezier(0, 0, 0, 1);
+    .avatarWrapper__37e49:active::after {
         transition: 0ms ease;
+        animation: scale 200ms cubic-bezier(0, 0, 0, 1);
+        opacity: 0.1;
     }    
 }
 

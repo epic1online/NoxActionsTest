@@ -1,6 +1,6 @@
 // remove top border
 .container__133bf.container__133bf {
-    border: none;
+    border: 0;
 }
 
 .tabBody__133bf.tabBody__133bf {
@@ -15,13 +15,12 @@
     color: var(--nox-white7);
 }
 .tabBar__133bf .item__133bf.item__133bf.item__133bf.selected_b3f026,
-.tabBar__133bf .item__133bf.item__133bf.item__133bf.item__133bf.selected_b3f026:hover
- {
+.tabBar__133bf .item__133bf.item__133bf.item__133bf.item__133bf.selected_b3f026:hover {
     background-color: var(--nox-white1);
 }
 .themed_b3f026.item__133bf.item__133bf {
-    color: var(--nox-white4);
     border-radius: 4px;
+    color: var(--nox-white4);
 }
 .themed_b3f026.item__133bf.item__133bf:hover {
     color: var(--nox-white6);
@@ -47,8 +46,8 @@
 // search bar
 .searchBar__5ec2f.searchBar__5ec2f {
     margin-right: 24px;
-    background: var(--nox-level3);
     border-radius: 4px;
+    background: var(--nox-level3);
 }
 .input_a45028 {
     color: var(--nox-white6);
@@ -68,8 +67,8 @@
     margin: 0 10px 0 20px;
     padding: 16px 10px;
     // border-radius: 0;
-    border: none;
-    background-color: rgba(0,0,0,.1);
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 .peopleListItem_cc6179.peopleListItem_cc6179:hover {
     // margin-bottom: 16px;
@@ -84,7 +83,7 @@
 }
 
 .avatar__0a06e {
-align-self: center;
+    align-self: center;
 }
 .title__1472a,
 .username__0a06e {
@@ -117,9 +116,9 @@ align-self: center;
     color: var(--nox-white7);
 }
 .itemCard__7e549.itemCard__7e549 {
-    border: none;
-    background-color: var(--nox-black4);
+    border: 0;
     border-radius: 4px;
+    background-color: var(--nox-black4);
 }
 .body__00943.body__00943 {
     background: none;
@@ -164,9 +163,9 @@ align-self: center;
     color: var(--nox-white4);
 }
 .addFriendInputWrapper__72ba7 {
-    background-color: var(--nox-level2);
-    border: none;
+    border: 0;
     border-radius: 4px;
+    background-color: var(--nox-level2);
 }
 .input__72ba7 {
     color: var(--nox-white6);
@@ -175,10 +174,10 @@ align-self: center;
 .input__72ba7::placeholder {
     color: var(--nox-white2);
 }
-.container_a14595{
-    border: none;
-    background-color: var(--nox-black4);
+.container_a14595 {
+    border: 0;
     border-radius: 4px;
+    background-color: var(--nox-black4);
 }
 .container_a14595:hover {
     background-color: var(--nox-black2);

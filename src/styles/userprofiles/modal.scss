@@ -11,8 +11,8 @@
     }
 
     .additionalActionsIcon_ec3b75 { // menu button next to send message
+        transition: 100ms ease;
         opacity: 0.5;
-        transition:100ms ease;
     }
 
     .additionalActionsIcon_ec3b75:hover { // menu button next to send message
@@ -30,35 +30,35 @@
 
     .overlayBackground_c69a7b {
         margin: 0;
-        background: none;
         border-radius: 0;
+        background: none;
     }
 
     .body__24502 {
-        border-radius: 0;
         height: 100%;
+        border-radius: 0;
     }
 
     .container_afed89 {
-        padding-top: 12px;
-        padding-left: 28px;
-        padding-right: 28px;
         z-index: 1;
+        padding-top: 12px;
+        padding-right: 28px;
+        padding-left: 28px;
     }
 
     .tabBarContainer_b9fccc {
+        z-index: 1;
         margin: 0;
         padding-top: 20px;
-        padding-left: 28px;
         padding-right: 28px;
-        border: none;
+        padding-left: 28px;
+        border: 0;
         box-shadow: 0 11px 20px -10px rgba(0, 0, 0, 0.4);
-        z-index: 1;
     }
 
     .divider-SH6OnO,
     .userInfoSection_a24910+.userInfoSection_a24910 {
-        border: none;
+        border: 0;
     }
 
     .infoScroller_a24910,
@@ -67,12 +67,12 @@
         overflow: hidden overlay !important;
     }
     .infoScroller_a24910 {
-        padding-left: 28px;
         padding-right: 28px !important;
+        padding-left: 28px;
     }
     .listScroller__9d78f {
-        padding-left: 16px;
         padding-right: 16px !important;
+        padding-left: 16px;
     }
 
     // Tab icons 
@@ -90,8 +90,8 @@
     // hover/selected
     .tabBarItem_b9fccc.selected_b3f026,
     .tabBarItem_b9fccc:hover {
-        opacity: 1;
         border-bottom-color: transparent !important;
+        opacity: 1;
 
     }
 
@@ -141,27 +141,27 @@
     .infoScroller_a24910::before,
     .listScroller__9d78f::before {
         content: '';
+        position: fixed;
+        bottom: 4px;
+        left: 4px;
         width: 600px;
         height: 264px;
-        position: fixed;
-        left: 4px;
-        bottom: 4px;
-        background-color: var(--profile-gradient-overlay-color);
         opacity: 0.75;
+        background-color: var(--profile-gradient-overlay-color);
     }
     .infoScroller_a24910::after,
     .listScroller__9d78f::after {
         content: '';
+        position: fixed;
+        z-index: -1;
+        bottom: 4px;
+        left: 4px;
         width: 600px;
         height: 264px;
-        position: fixed;
-        left: 4px;
-        bottom: 4px;
         background: linear-gradient(var(--profile-gradient-primary-color) -400px, var(--profile-gradient-secondary-color));
-        z-index: -1;
     }
     .infoScroller_a24910 > *,
-    .listScroller__9d78f > *{
+    .listScroller__9d78f > * {
         position: relative;
     }
     .userProfileInnerThemedPremiumWithoutBanner_c69a7b .infoScroller_a24910::after,
@@ -172,8 +172,8 @@
 
 .theme-dark {
     .tabBarItem_b9fccc:nth-child(1) { // user info
-        padding-left: 0;
         content: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTEyIDEyYzIuMjEgMCA0LTEuNzkgNC00cy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PC9zdmc+);
+        padding-left: 0;
     }
 
     .tabBarItem_b9fccc:nth-child(2):nth-last-child(3) { // activity
@@ -191,8 +191,8 @@
 
 .theme-light {
     .tabBarItem_b9fccc:nth-child(1) { // user info
-        padding-left: 0;
         content: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTEyIDEyYzIuMjEgMCA0LTEuNzkgNC00cy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PC9zdmc+);
+        padding-left: 0;
     }
 
     .tabBarItem_b9fccc:nth-child(2):nth-last-child(3) { // activity

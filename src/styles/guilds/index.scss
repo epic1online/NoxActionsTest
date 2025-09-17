@@ -19,8 +19,8 @@
 
 // fix spacing on folder bg
 .folderGroupBackground__48112 {
-    left: 0;
     right: 0;
+    left: 0;
     justify-self: center;
 }
 // fix folder height
@@ -30,9 +30,9 @@ ul[id*=folder-items] {
 
 // reset scroller
 .guilds_c48ade .scroller_ef3116 {
+    height: 100%;
     padding: 0;
     gap: 0 !important;
-    height: 100%;
 }
 
 // prevent overlap of homeicon and servers
@@ -71,13 +71,13 @@ ul[id*=folder-items] {
 
 // recolor open folders and shape them
 .folderGroupBackground__48112.folderGroupBackground__48112 {
-    background: var(--nox-white1) !important;
-    padding: 6px;
     bottom: 8px;
-    width: 48px;
-    border-radius: 16px 16px 30px 30px;
     box-sizing: content-box;
+    width: 48px;
+    padding: 6px;
     border: 0;
+    border-radius: 16px 16px 30px 30px;
+    background: var(--nox-white1) !important;
 }
 
 // recolor guild separator
@@ -96,10 +96,10 @@ ul[id*=folder-items] {
     height: 70px !important;
 }
 .svg_cc5dd2 {
+    top: 0;
+    left: 0;
     width: 70px;
     height: 70px;
-    left: 0;
-    top: 0;
 }
 .listItem__650eb .svg_cc5dd2 foreignObject {
     width: 48px;
@@ -119,9 +119,9 @@ ul[id*=folder-items] {
 
 // increase clicking area folder
 .folderHeader__48112 {
-    margin: 0;
     width: 70px;
     height: 70px;
+    margin: 0;
 }
 .folderButton__48112.folderButton__48112 {
     width: 70px;
@@ -139,9 +139,9 @@ ul[id*=folder-items] {
 //     transform: scale(calc(48/70));
 // }
 .folderPreviewWrapper__48112.folderPreviewWrapper__48112 {
+    overflow: hidden;
     transform: scale(calc(48/70));
     border-radius: 50%;
-    overflow: hidden;
 }
 
 // remove gap between servers in folder
@@ -152,9 +152,9 @@ ul[id*=folder-items] {
 // Home button and circle buttons
 .childWrapper__6e9f8.childWrapper__6e9f8.childWrapper__6e9f8,
 .circleIconButton__5bc7e {
-    background-color: var(--nox-level2);
-    border-radius: 50%;
     transform: scale(calc((48*52)/(70*44)));
+    border-radius: 50%;
+    background-color: var(--nox-level2);
 }
 
 // center text on iconless servers
@@ -174,7 +174,7 @@ ul[id*=folder-items] {
 }
 
 // remove server icon background
-.icon__6e9f8:before {
+.icon__6e9f8::before {
     content: none;
 }
 
@@ -193,9 +193,9 @@ ul[id*=folder-items] {
 }
 
 // dragging position indicator green to accent
-.centerTarget_d144f8.dragOver_d144f8:before, // combine server
-.target_d144f8.dragOver_d144f8:before { // above server
-	background-color: var(--nox-accent);
+.centerTarget_d144f8.dragOver_d144f8::before, /* combine server*/
+.target_d144f8.dragOver_d144f8::before { // above server
+    background-color: var(--nox-accent);
 }
 
 
@@ -204,13 +204,13 @@ ul[id*=folder-items] {
 // alignment of badges
 .lowerBadge_cc5dd2,
 .upperBadge_cc5dd2 {
+    display: flex;
+    z-index: calc(elevations.$guilds-elevation + 1);
     top: calc((100% - 48px) / 2);
     left: calc((100% - 48px) / 2);
+    justify-content: flex-end;
     width: 48px;
     height: 48px;
-    display: flex;
-    justify-content: flex-end;
-    z-index: calc(elevations.$guilds-elevation + 1);
 }
 
 .lowerBadge_cc5dd2 {
@@ -237,8 +237,8 @@ ul[id*=folder-items] {
 }
 
 .blobContainer_e5445c.blobContainer_e5445c[data-drop-hovering=true] {
-    background-color: transparent;
-    border-color: var(--nox-accent);
-    border-radius: 50%;
     animation: none;
+    border-radius: 50%;
+    border-color: var(--nox-accent);
+    background-color: transparent;
 }
