@@ -5,10 +5,9 @@ const dartSass = require("sass");
 const sass = require("gulp-sass")(dartSass);
 const rename = require("gulp-rename");
 const insert = require("gulp-insert");
-const wait = require("gulp-wait");
-const globImporter = require("node-sass-glob-importer");
+const glob = require("glob");
 
-const META = `/*//META{"name":"Nox","description":"A theme for Discord loosely based on Google's Material Design Guidelines.","author":"Lilian Tedone & Zerebos","version":"1.0.0"}*//**/
+const META = `/*//META{"name":"NoxDev","description":"A theme for Discord loosely based on Google's Material Design Guidelines.","author":"Lilian Tedone & Zerebos","version":"2.0.0"}*//**/
 
 `;
 
@@ -57,44 +56,60 @@ const sassInlineImage = function(options) {
 	};
 
     const base = options.base || process.cwd();
-    return function(file) {
-		const relativePath = './' + file.getValue();
-		const filePath = path.resolve(base, relativePath);
-		const ext = filePath.split('.').pop();
+    return function (args) {
+        file = args[0].text;
+        const relativePath = './' + file;
+        const filePath = path.resolve(base, relativePath);
+        const ext = path.extname(filePath).slice(1);
 		const data = fs.readFileSync(filePath);
-		const buffer = new Buffer(data);
-		const str = ext === 'svg' ? svg(buffer, ext) : img(buffer, ext);
+		const str = ext === 'svg' ? svg(data) : img(data, ext);
 		return new dartSass.SassString(str);
 	};
 };
 
 
 const sassOptions = {
-	functions:
-	{
-		"inline-image($file)": sassInlineImage()
-	},
-	importer: globImporter(),
+	functions: { "inline-image($file)": sassInlineImage() },
 	outputStyle: "compressed"
 };
 
+function generateTempScss() {
+    const stylesDir = path.resolve("./src/styles");
+    const tmpFile = path.resolve("./_tmp.scss");
+    const files = glob.sync("**/*.scss", { cwd: stylesDir });
+
+    const content = files
+        .map(file => {
+            const rel = path.relative(path.resolve('./'), path.join(stylesDir, file)).replace(/\\/g, "/");
+            const folder = path.basename(path.dirname(rel));
+            const base = path.basename(file, ".scss").replace(/[^a-zA-Z0-9_-]/g, '');
+            const safeName = `${folder}_${base}`;
+            return `@use '${rel}' as ${safeName};`;
+        })
+        .join("\n");
+
+    fs.writeFileSync(tmpFile, content);
+    return tmpFile;
+}
+
 gulp.task("import", function () {
-  return gulp.src("./src/index.scss")
+    generateTempScss();
+    return gulp.src("./src/index.scss")
     .pipe(sass(sassOptions).on("error", sass.logError))
     .pipe(rename({basename: "import", extname: ".css"}))
     .pipe(insert.prepend(LICENSE))
     .pipe(gulp.dest("./release/"));
 });
- 
+
 gulp.task("sass", function () {
-	return gulp.src("./src/index.scss")
-	  .pipe(wait(200))
-    .pipe(sass.sync(sassOptions).on("error", sass.logError))
-    .pipe(rename({basename: "Nox.theme", extname: ".css"}))
-    .pipe(insert.prepend(META + LICENSE))
-    .pipe(gulp.dest("Z:/Programming/BetterDiscordStuff/themes"));
+    generateTempScss();
+    return gulp.src("./src/index.scss")
+        .pipe(sass.sync(sassOptions).on("error", sass.logError))
+        .pipe(rename({basename: "NoxDev.theme", extname: ".css"}))
+        .pipe(insert.prepend(META + LICENSE))
+        .pipe(gulp.dest("Z:/Programming/BetterDiscordStuff/themes"));
 });
 
 gulp.task("sass-watch", function() {
-  return gulp.watch(["./src/**/*.scss"]).on("all", gulp.series("sass"));
+    return gulp.watch(["./src/**/*.scss"]).on("all", gulp.series("sass"));
 });
