@@ -43,12 +43,14 @@
     min-height: 0;
 }
 
-.channelBottomBarArea_f75fb0 .slateTextArea_ec4baf.slateTextArea_ec4baf {
+.channelBottomBarArea_f75fb0 .slateTextArea_ec4baf {
     min-height: 0;
     padding: 0;
 }
 
 .slateContainer_ec4baf {
+    box-sizing: content-box;
+    padding-block: calc((64px - 22px) / 2);
     align-content: center;
 }
 
@@ -61,6 +63,11 @@
 .replyBar__841c8 {
     z-index: 1;
     background: none;
+}
+
+// remove gradient above bars
+.chatGradientBase__36d07 {
+    display: none;
 }
 
 .channelTextArea_f75fb0.channelTextArea_f75fb0 {

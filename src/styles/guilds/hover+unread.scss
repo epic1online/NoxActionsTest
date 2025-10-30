@@ -26,7 +26,7 @@
 
 // active bg
 .wrapper_cc5dd2:active::after,
-.listItem__650eb:has(.item__58105[style="opacity: 1; height: 40px; transform: none;"]) .wrapper_cc5dd2::after {
+.listItem__650eb:has(.item__58105[style^="opacity: 1; height: 40px; transform:"]) .wrapper_cc5dd2::after {
     background: var(--nox-black2);
 }
 
@@ -46,7 +46,7 @@
 }
 
 // unread
-.listItem__650eb:has(.item__58105[style="opacity: 1; height: 8px; transform: none;"]) .wrapper_cc5dd2::before {
+.listItem__650eb:has(.item__58105[style^="opacity: 1; height: 8px; transform:"]) .wrapper_cc5dd2::before {
     border-color: var(--nox-notification-color);
 }
 
