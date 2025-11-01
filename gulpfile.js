@@ -70,7 +70,7 @@ const sassInlineImage = function(options) {
 
 const sassOptions = {
 	functions: { "inline-image($file)": sassInlineImage() },
-	outputStyle: "compressed"
+	style: "compressed"
 };
 
 function generateTempScss() {
