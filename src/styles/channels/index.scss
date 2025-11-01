@@ -1,7 +1,7 @@
 @use "../../elevations";
 
 // Remove rounded corner at top left of channel list and allow shadow
-.platform-win .sidebarList_c48ade {
+.sidebarList__5e434 {
     z-index: elevations.$channels-elevation;
     overflow: visible;
     border: 0;
@@ -10,22 +10,22 @@
 }
 
 // Main channel list container
-.sidebar_c48ade .container__2637a {
+.sidebar__5e434 .container__2637a {
     background: var(--nox-level2);
 }
 
 // Scroller
-.sidebar_c48ade .scroller__629e4 {
+.sidebar__5e434 .scroller__629e4 {
     margin-bottom: 0;
 }
 
-.sidebar_c48ade .scroller__629e4::-webkit-scrollbar {
+.sidebar__5e434 .scroller__629e4::-webkit-scrollbar {
     width: 8px !important;
     border-radius: 0 !important;
     background: var(--nox-level2) !important;
 }
 
-.sidebar_c48ade .scroller__629e4::-webkit-scrollbar-thumb {
+.sidebar__5e434 .scroller__629e4::-webkit-scrollbar-thumb {
     visibility: visible !important;
     border: 0 solid transparent !important;
     border-left: 4px solid var(--nox-level2) !important;
@@ -33,19 +33,19 @@
     background: rgba(255, 255, 255, 0.05) !important;
 }
 
-.sidebar_c48ade .scroller__629e4::-webkit-scrollbar-thumb:hover {
+.sidebar__5e434 .scroller__629e4::-webkit-scrollbar-thumb:hover {
     background: var(--nox-white1) !important;
 }
 
-.sidebar_c48ade .scroller__629e4::-webkit-scrollbar-thumb:active {
+.sidebar__5e434 .scroller__629e4::-webkit-scrollbar-thumb:active {
     background: var(--nox-white2) !important;
 }
 
-.sidebar_c48ade .scroller__629e4::-webkit-scrollbar-track {
+.sidebar__5e434 .scroller__629e4::-webkit-scrollbar-track {
     background: transparent !important;
 }
 
-.sidebar_c48ade .scroller__629e4::-webkit-scrollbar-thumb {
+.sidebar__5e434 .scroller__629e4::-webkit-scrollbar-thumb {
     display: var(--nox-channels-scrollbar);
 }
 
