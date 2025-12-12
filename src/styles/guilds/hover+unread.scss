@@ -8,7 +8,8 @@
 }
 
 // set up hover/active/selected bg
-.wrapper_cc5dd2::after {
+.blobContainer_e5445c > .wrapper_cc5dd2::after,
+.folderButton__48112::after {
     content: "";
     display: block;
     position: absolute;
@@ -20,18 +21,19 @@
 }
 
 // hover bg
-.wrapper_cc5dd2:hover::after {
+:is(.wrapper_cc5dd2, .folderButton__48112):hover::after {
     background: var(--nox-white1);
 }
 
 // active bg
-.wrapper_cc5dd2:active::after,
-.listItem__650eb:has(.item__58105[style^="opacity: 1; height: 40px; transform:"]) .wrapper_cc5dd2::after {
+:is(.wrapper_cc5dd2, .folderButton__48112):active::after,
+.listItem__650eb:has(.item__58105[style^="opacity: 1; height: 40px; transform:"]) :is(.wrapper_cc5dd2, .folderButton__48112)::after {
     background: var(--nox-black2);
 }
 
 // set up unread circle
-.wrapper_cc5dd2::before {
+.blobContainer_e5445c > .wrapper_cc5dd2::before,
+.folderButton__48112::before {
     content: "";
     display: block;
     position: absolute;
@@ -46,7 +48,7 @@
 }
 
 // unread
-.listItem__650eb:has(.item__58105[style^="opacity: 1; height: 8px; transform:"]) .wrapper_cc5dd2::before {
+.listItem__650eb:has(.item__58105[style^="opacity: 1; height: 8px; transform:"]) :is(.wrapper_cc5dd2, .folderButton__48112)::before {
     border-color: var(--nox-notification-color);
 }
 
@@ -57,7 +59,7 @@ ul[id*=folder-items] .wrapper_cc5dd2::after {
 }
 
 // prevent hover highlight for open folder icon
-.folderGroup__48112.isExpanded__48112 .folderButton__48112 .wrapper_cc5dd2::after {
+.folderGroup__48112.isExpanded__48112 .folderButton__48112::after {
     content: none;
 }
 .folderButton__48112:focus .folderIcon__48112.folderIcon__48112,

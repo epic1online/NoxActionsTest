@@ -7,7 +7,7 @@ const rename = require("gulp-rename");
 const insert = require("gulp-insert");
 const glob = require("glob");
 
-const META = `/*//META{"name":"NoxDev","description":"A theme for Discord loosely based on Google's Material Design Guidelines.","author":"Lilian Tedone & Zerebos","version":"2.0.0"}*//**/
+const META = `/** \n* @name NoxDev \n* @author Lilian Tedone, Zerebos and epic1online \n* @description A theme for Discord *loosely* based on Google's Material Design Guidelines. \n* @version 2.0.0 \n* @invite vzKhKTV \n* @website https://github.com/zerebos/Nox \n* @source https://raw.githubusercontent.com/zerebos/Nox/master/release/Nox.theme.css */
 
 `;
 
@@ -107,7 +107,7 @@ gulp.task("sass", function () {
         .pipe(sass.sync(sassOptions).on("error", sass.logError))
         .pipe(rename({basename: "NoxDev.theme", extname: ".css"}))
         .pipe(insert.prepend(META + LICENSE))
-        .pipe(gulp.dest("Z:/Programming/BetterDiscordStuff/themes"));
+        .pipe(gulp.dest(`${process.env.APPDATA}/BetterDiscord/themes`));
 });
 
 gulp.task("sass-watch", function() {

@@ -1,5 +1,9 @@
 @use "../../elevations";
 
+:root {
+    --guildbar-avatar-size: 48px
+}
+
 // Guild list bg color
 .guilds__5e434.guilds__5e434 {
     z-index: elevations.$guilds-elevation;
@@ -36,8 +40,13 @@ ul[id*=folder-items] {
 }
 
 // prevent overlap of homeicon and servers
-.tutorialContainer__1f388 + .stack_dbd263 {
-    margin-top: 0;
+.tutorialContainer__1f388 {
+    & .listItem__650eb {
+        height: 70px;
+    }
+    & + .stack_dbd263{
+        margin-top: 0;
+    }
 }
 
 // make dms same height as servers
@@ -66,7 +75,7 @@ ul[id*=folder-items] {
 
 // folder color to accent
 .folderIcon__48112 {
-    color: var(--nox-accent) !important;
+    color: var(--nox-accent);
 }
 
 // recolor open folders and shape them
@@ -91,20 +100,28 @@ ul[id*=folder-items] {
 }
 
 // increase clicking area servers
-.wrapper_cc5dd2 {
+:is(.blobContainer_e5445c, .listItemWrapper__91816) > .wrapper_cc5dd2 {
     width: 70px !important;
     height: 70px !important;
 }
+
+foreignObject > .wrapper_cc5dd2 {
+    width: 48px !important;
+    height: 48px !important;
+}
+
 .svg_cc5dd2 {
     top: 0;
     left: 0;
-    width: 70px;
-    height: 70px;
+    .blobContainer_e5445c > .wrapper_cc5dd2 > & {
+        width: 70px;
+        height: 70px;
+    }
 }
 .listItem__650eb .svg_cc5dd2 foreignObject {
     width: 48px;
     height: 48px;
-    transform: translate(-4px, -4px);
+    translate: -4px -4px;
     mask: none;
 }
 .wrapper__6e9f8 {
@@ -113,7 +130,7 @@ ul[id*=folder-items] {
 }
 // scale icon back down
 .icon__6e9f8 {
-    transform: scale(calc((48*52)/(70*44)));
+    scale: calc(48/70);
     border-radius: 50%;
 }
 
@@ -123,24 +140,23 @@ ul[id*=folder-items] {
     height: 70px;
     margin: 0;
 }
-.folderButton__48112.folderButton__48112 {
+.folderButton__48112 {
     width: 70px;
     height: 70px;
     padding: 0;
     border-radius: 0;
+
+    .wrapper_cc5dd2 {
+        margin-inline:auto;
+        top:50%;
+        translate: 0 -50%;
+    }
+    .svg_cc5dd2 foreignObject {
+        translate: none;
+    }
 }
-.folderButton__48112 .svg_cc5dd2 foreignObject {
-    width: 44px;
-    height: 44px;
-    transform: none;
-}
-// scale icons back down
-// .folderIconWrapper__48112 {
-//     transform: scale(calc(48/70));
-// }
-.folderPreviewWrapper__48112.folderPreviewWrapper__48112 {
+.folderPreviewWrapper__48112 {
     overflow: hidden;
-    transform: scale(calc(48/70));
     border-radius: 50%;
 }
 
@@ -150,9 +166,14 @@ ul[id*=folder-items] {
 }
 
 // Home button and circle buttons
-.childWrapper__6e9f8.childWrapper__6e9f8.childWrapper__6e9f8,
+:is(.tutorialContainer__1f388, .tutorialContainer__650eb, .tutorialContainer__650eb + .listItem__650eb) .svg_cc5dd2 {
+    width: 70px;
+    height: 70px;
+}
+
+.childWrapper__6e9f8,
 .circleIconButton__5bc7e {
-    transform: scale(calc((48*52)/(70*44)));
+    transform: scale(calc(48/70));
     border-radius: 50%;
     background-color: var(--nox-level2);
 }
@@ -163,7 +184,6 @@ ul[id*=folder-items] {
 }
 
 .circleIconButton__5bc7e {
-    translate: 4px 4px;
     color: var(--nox-accent);
 }
 
@@ -189,7 +209,7 @@ ul[id*=folder-items] {
 
 // make material icon bigger
 .folderIcon__48112 svg {
-    scale: (calc((48*44)/(70*18)));
+    scale: calc(48/18);
 }
 
 // dragging position indicator green to accent
