@@ -1,54 +1,54 @@
 // invite embed
-.wrapper_d5f3cd {
+.d5f3cd116f175f35-wrapper {
     border-radius: 3px;
     background-color: var(--nox-level2);
 }
-.wrapper_d5f3cd .flowerStar__3e3b0 path {
+.d5f3cd116f175f35-wrapper ._3e3b0b1c0f688f9e-flowerStar path {
     fill: var(--nox-accent);
 }
-.guildIconExpired_d5f3cd {
+.d5f3cd116f175f35-guildIconExpired {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.05);
     filter: grayscale(1);
 }
 
 // bot embed
-.embedFull__623de {
+._623de82e76ad7f82-embedFull {
     border-radius: 3px;
     border-color: var(--nox-white1);
     background: var(--nox-level2);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.botTagRegular__82f07 {
+._82f0793afa59e5dc-botTagRegular {
     background: var(--nox-accent);
 }
 
 // file embed
-.fileWrapper__0ccae.fileWrapper__0ccae {
+._0ccaee68b77c7469-fileWrapper._0ccaee68b77c7469-fileWrapper {
     border-radius: 2px;
     border-color: var(--nox-level3);
     background-color: var(--nox-level2);
 }
-.fileWrapper__0ccae .metadata__0ccae {
+._0ccaee68b77c7469-fileWrapper ._0ccaee68b77c7469-metadata {
     color: var(--nox-white2);
 }
 
 // textfile embed
-.newMosaicStyle__4d95d .textContainer__4d95d {
+._4d95d73152192cf9-newMosaicStyle ._4d95d73152192cf9-textContainer {
     border-radius: 3px 3px 0 0;
 }
-.newMosaicStyle__4d95d .footer__4d95d {
+._4d95d73152192cf9-newMosaicStyle ._4d95d73152192cf9-footer {
     border-radius: 0 0 3px 3px;
 }
-.textContainer__4d95d,
-.footer__4d95d,
-.codeView__4d95d {
+._4d95d73152192cf9-textContainer,
+._4d95d73152192cf9-footer,
+._4d95d73152192cf9-codeView {
     border-color: var(--nox-level3);
     background-color: var(--nox-level2);
     color: var(--nox-white6);
 }
-.toggleExpandSection__4d95d {
+._4d95d73152192cf9-toggleExpandSection {
     color: var(--nox-white6);
 }
 .theme-dark .hljs-code,
@@ -56,40 +56,40 @@
 .theme-dark .hljs-formula {
     color: var(--nox-white4);
 }
-.toggleExpandSection__4d95d:hover {
+._4d95d73152192cf9-toggleExpandSection:hover {
     color: var(--nox-white9);
 }
-.footer__4d95d .formattedSize__4d95d {
+._4d95d73152192cf9-footer ._4d95d73152192cf9-formattedSize {
     color: var(--nox-white2);
 }
-.footer__4d95d .downloadButton__4d95d,
-.footer__4d95d .codeIcon__4d95d {
+._4d95d73152192cf9-footer ._4d95d73152192cf9-downloadButton,
+._4d95d73152192cf9-footer ._4d95d73152192cf9-codeIcon {
     color: var(--nox-white4);
 }
-.footer__4d95d .downloadSection__4d95d:hover .downloadButton__4d95d,
-.footer__4d95d .codeIcon__4d95d:hover {
+._4d95d73152192cf9-footer ._4d95d73152192cf9-downloadSection:hover ._4d95d73152192cf9-downloadButton,
+._4d95d73152192cf9-footer ._4d95d73152192cf9-codeIcon:hover {
     color: var(--nox-white6);
 }
 // language selector
-.languageSelector__4d95d {
+._4d95d73152192cf9-languageSelector {
     border-radius: 0;
     background-color: var(--nox-level2);
 }
-.languageSelector__4d95d .container__33507 {
+._4d95d73152192cf9-languageSelector .container__33507 {
     margin: 2px 2px 0;
     border-radius: 0;
     background-color: var(--nox-level1);
 }
-.languageSelector__4d95d .item__97e86 {
+._4d95d73152192cf9-languageSelector ._97e869e420e80b14-item {
     border-radius: 3px;
     color: var(--nox-white4);
 }
-.focused__97e86,
-.item__97e86:hover:not(.disabled__97e86) {
+._97e869e420e80b14-focused,
+._97e869e420e80b14-item:hover:not(._97e869e420e80b14-disabled) {
     background-color: rgba(255, 255, 255, 0.05);
     color: var(--nox-white6);
 }
-.item__97e86.item__97e86.selected__97e86 {
+._97e869e420e80b14-item._97e869e420e80b14-item._97e869e420e80b14-selected {
     background-color: var(--nox-black3);
     color: var(--nox-white9);
 }
@@ -119,27 +119,27 @@
 }
 
 // voice embed
-.messageAttachment__5dae1 .container_a8e786 {
+.messageAttachment__5dae1 .a8e786485f0c32f8-container {
     border-radius: 4px;
     background-color: var(--nox-level3);
 }
-.theme-dark .container_a8e786:not(.playing_a8e786) .playButtonContainer_a8e786 {
+.theme-dark .a8e786485f0c32f8-container:not(.a8e786485f0c32f8-playing) .a8e786485f0c32f8-playButtonContainer {
     background: var(--nox-accent);
 }
-.theme-dark .container_a8e786:not(.playing_a8e786) .playButtonContainer_a8e786:hover {
+.theme-dark .a8e786485f0c32f8-container:not(.a8e786485f0c32f8-playing) .a8e786485f0c32f8-playButtonContainer:hover {
     background: var(--nox-accent);
     filter: brightness(1.1);
 }
-.playing_a8e786 .playIcon_a8e786 {
+.a8e786485f0c32f8-playing .a8e786485f0c32f8-playIcon {
     color: var(--nox-accent);
 }
-.rippleContainer_a8e786 {
+.a8e786485f0c32f8-rippleContainer {
     border-radius: 0;
 }
-.ripple_a8e786 {
+.a8e786485f0c32f8-ripple {
     border-radius: 0;
     background-color: var(--nox-level1-5);
 }
-.playing_a8e786 .volumeButtonIcon_a8e786 {
+.a8e786485f0c32f8-playing .a8e786485f0c32f8-volumeButtonIcon {
     color: var(--nox-white6);
 }
