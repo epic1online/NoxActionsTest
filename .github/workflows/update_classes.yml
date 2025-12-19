@@ -31,7 +31,7 @@ jobs:
   reroll-classes:
     runs-on: ubuntu-latest
     needs: check-for-updates
-    if: ${{ needs.check-for-updates.outputs.needs-reroll }}
+    if: ${{ needs.check-for-updates.outputs.needs-reroll == true }}
 
     steps:
       - name: checkout current repository
