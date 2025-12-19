@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       needs-reroll: ${{ steps.check-updates.outputs.needs-reroll }}
-      hash: ${{ steps.check-updates.outputs.hash }}
     steps:
       - uses: actions/checkout@v6
 
@@ -19,7 +18,6 @@ jobs:
           recent_commit=$(curl -sL "https://api.github.com/repos/SyndiShanX/Update-Classes/commits?path=Changes.txt" | jq -r ".[0].sha")
           echo "Last commit to Changes.txt was $recent_commit"
           echo "needs-reroll=[[ $recent_commit != $(cat .github/workflow_data/previous-commit)]]" >> "$GITHUB_OUTPUT"
-          echo "hash=$recent_commit" >> "$GITHUB_OUTPUT"
 
   reroll-classes:
     runs-on: ubuntu-latest
@@ -53,7 +51,7 @@ jobs:
         run: node tools/updater/RDCU.js tools/changes/Changes.txt
 
       - name: store commit hash
-        run: echo "${{ needs.check-for-updates.outputs.hash }}" > .github/workflow_data/previous-reroll
+        run: echo "$(curl -sL "https://api.github.com/repos/SyndiShanX/Update-Classes/commits?path=Changes.txt" | jq -r ".[0].sha")" > .github/workflow_data/previous-reroll
         
       - name: clean up
         run: git clean -fde ".github"
