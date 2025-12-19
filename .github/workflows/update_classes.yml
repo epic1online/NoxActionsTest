@@ -25,6 +25,7 @@ jobs:
               needs_reroll=false
           fi
 
+          echo "needs-reroll=$needs_reroll"
           echo "needs-reroll=$needs_reroll" >> "$GITHUB_OUTPUT"
 
   reroll-classes:
