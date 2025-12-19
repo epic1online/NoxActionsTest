@@ -55,8 +55,8 @@ jobs:
       - name: store commit hash
         run: echo "${{ needs.check-for-updates.outputs.hash }}" > .github/workflow_data/previous-reroll
         
-      - name: remove artifacts
-        run: rm -rf tools/
+      - name: clean up
+        run: git clean -fde ".github"
 
       - name: create pr
         uses: peter-evans/create-pull-request@v8
