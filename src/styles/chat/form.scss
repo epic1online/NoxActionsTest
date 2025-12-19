@@ -1,21 +1,21 @@
 @use "../../elevations";
 
-.form_f75fb0.form_f75fb0.form_f75fb0 {
+.f75fb00fb7356cbe-form.f75fb00fb7356cbe-form.f75fb00fb7356cbe-form {
     margin-top: 0;
     padding: 0;
     background: none;
 
-    &:not(:has(.hasStackedBar__74017)) {
+    &:not(:has(._740174f3d6a2c8fe-hasStackedBar)) {
         box-shadow: elevations.$elevation-shadow;
     }
 }
 
-.form_f75fb0::after,
-.form_f75fb0::before {
+.f75fb00fb7356cbe-form::after,
+.f75fb00fb7356cbe-form::before {
     content: none;
 }
 
-.channelTextArea_f75fb0 .scrollableContainer__74017 {
+.f75fb00fb7356cbe-channelTextArea ._740174f3d6a2c8fe-scrollableContainer {
     // padding: 10px 0 10px 0;
     border-radius: 0;
     // max-height: 400px!important;
@@ -24,9 +24,9 @@
 }
 
 // fix height
-.buttons__74017,
-.attachWrapper__0923f,
-.attachButton__0923f.attachButton__0923f {
+._740174f3d6a2c8fe-buttons,
+._0923f156a0410684-attachWrapper,
+._0923f156a0410684-attachButton._0923f156a0410684-attachButton {
     top: 0;
     bottom: 0;
     align-self: center;
@@ -34,54 +34,54 @@
     min-height: 0;
 }
 
-.attachWrapper__0923f.attachWrapper__0923f {
+._0923f156a0410684-attachWrapper._0923f156a0410684-attachWrapper {
     padding: 10px;
 }
 
-.channelBottomBarArea_f75fb0 .textArea__74017 {
+.f75fb00fb7356cbe-channelBottomBarArea ._740174f3d6a2c8fe-textArea {
     align-self: center;
     min-height: 0;
 }
 
-.channelBottomBarArea_f75fb0 .slateTextArea_ec4baf {
+.f75fb00fb7356cbe-channelBottomBarArea .ec4baf0360ff3578-slateTextArea {
     min-height: 0;
     padding: 0;
 }
 
-.slateContainer_ec4baf {
+.ec4baf0360ff3578-slateContainer {
     box-sizing: content-box;
     padding-block: calc((64px - 22px) / 2);
     align-content: center;
 }
 
 // reply bar
-.stackedBars__74017.stackedBars__74017 {
+._740174f3d6a2c8fe-stackedBars._740174f3d6a2c8fe-stackedBars {
     border-radius: 8px 8px 0 0;
     background: var(--nox-level2);
 }
 
-.replyBar__841c8 {
+._841c8f861f7b2704-replyBar {
     z-index: 1;
     background: none;
 }
 
 // remove gradient above bars
-.chatGradientBase__36d07 {
+._36d072eab2b2e737-chatGradientBase {
     display: none;
 }
 
-.channelTextArea_f75fb0.channelTextArea_f75fb0 {
+.f75fb00fb7356cbe-channelTextArea.f75fb00fb7356cbe-channelTextArea {
     margin: 0;
     border: 0;
     background: none;
 }
 
-.placeholder__1b31f.placeholder__1b31f {
+._1b31f471f0bb10ab-placeholder._1b31f471f0bb10ab-placeholder {
     padding: 0;
     color: var(--nox-white3);
 }
 
-.typing_b88801 {
+.b8880176888cc928-typing {
     bottom: 100%;
     padding: 0 20px;
     transition: opacity 200ms ease;
@@ -92,67 +92,67 @@
     color: var(--nox-white);
 }
 
-.typing_b88801:hover {
+.b8880176888cc928-typing:hover {
     opacity: 1;
 }
 
-.typing_b88801 .text_b88801 {
+.b8880176888cc928-typing .b8880176888cc928-text {
     line-height: 26px;
 }
 
-.typingDots_b88801 {
+.b8880176888cc928-typingDots {
     margin-right: 5px;
 }
 
-.cooldownWrapper_b21699 {
+.b216994de061a9e2-cooldownWrapper {
     color: var(--nox-white5) !important;
 }
 
 // removes gap above edit box
-.channelTextArea__5126c {
+._5126c0cd07f243a0-channelTextArea {
     margin-top: 0;
     border-radius: 0;
 }
 
 // edit box bg
-.channelTextArea__5126c .themedBackground__74017 {
+._5126c0cd07f243a0-channelTextArea ._740174f3d6a2c8fe-themedBackground {
     border-radius: 3px;
     background: var(--nox-level1-5);
 }
 
-.button_aa63ab[disabled]>.innerButton_aa63ab>.buttonChild_aa63ab,
-.buttonChild_aa63ab {
+.aa63abf63dbd9cce-button[disabled]>.innerButton_aa63ab>.aa63abf63dbd9cce-buttonChild,
+.aa63abf63dbd9cce-buttonChild {
     color: var(--nox-white2);
 }
 
-.activeButtonChild_aa63ab {
+.aa63abf63dbd9cce-activeButtonChild {
     color: var(--nox-accent);
 }
 
-.button_aa63ab.button_aa63ab:focus-within .activeButtonChild_aa63ab,
-.button_aa63ab.button_aa63ab:focus .activeButtonChild_aa63ab,
-.button_aa63ab.button_aa63ab:hover .activeButtonChild_aa63ab {
+.aa63abf63dbd9cce-button.aa63abf63dbd9cce-button:focus-within .aa63abf63dbd9cce-activeButtonChild,
+.aa63abf63dbd9cce-button.aa63abf63dbd9cce-button:focus .aa63abf63dbd9cce-activeButtonChild,
+.aa63abf63dbd9cce-button.aa63abf63dbd9cce-button:hover .aa63abf63dbd9cce-activeButtonChild {
     transition: opacity ease 300ms;
     opacity: 0.6 !important;
     color: var(--nox-accent);
 }
 
-.button_aa63ab.button_aa63ab:active .activeButtonChild_aa63ab {
+.aa63abf63dbd9cce-button.aa63abf63dbd9cce-button:active .aa63abf63dbd9cce-activeButtonChild {
     opacity: 1 !important;
     color: var(--nox-accent);
 }
 
-.codeBlockText_ada32f,
-.codeLine_ada32f {
+.ada32f6ad5a36c58-codeBlockText,
+.ada32f6ad5a36c58-codeLine {
     color: var(--nox-white5);
 }
 
-.codeBlockSyntax_ada32f,
-.syntaxAfter_ada32f,
-.syntaxBefore_ada32f {
+.ada32f6ad5a36c58-codeBlockSyntax,
+.ada32f6ad5a36c58-syntaxAfter,
+.ada32f6ad5a36c58-syntaxBefore {
     color: var(--nox-white6);
 }
 
-.codeBlockLang_ada32f {
+.ada32f6ad5a36c58-codeBlockLang {
     color: var(--nox-accent);
 }
