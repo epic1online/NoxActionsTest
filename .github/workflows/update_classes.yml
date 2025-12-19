@@ -51,7 +51,7 @@ jobs:
         run: node tools/updater/RDCU.js tools/changes/Changes.txt
 
       - name: store commit hash
-        run: echo "$(curl -sL "https://api.github.com/repos/SyndiShanX/Update-Classes/commits?path=Changes.txt" | jq -r ".[0].sha")" > .github/workflow_data/previous-reroll
+        run: echo "$(curl -sL "https://api.github.com/repos/SyndiShanX/Update-Classes/commits?path=Changes.txt" | jq -r ".[0].sha")" | install -D /dev/stdin .github/workflow_data/previous-reroll
         
       - name: clean up
         run: git clean -ffde ".github"
