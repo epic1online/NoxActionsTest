@@ -2,6 +2,7 @@ name: automatic class updater
 on:
   schedule:
     - cron: '15 3 * * *'
+  workflow_dispatch:
   
 jobs:
   check-for-updates:
