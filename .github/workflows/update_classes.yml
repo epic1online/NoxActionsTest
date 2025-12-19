@@ -16,7 +16,7 @@ jobs:
       - name: check if Changes.txt has been updated since the previous class reroll
         id: check-updates
         run: |
-          recent_commit=$(curl -sL "https://api.github.com/repos/SyndiShanX/Update-Classes/commits?path=Changes.txt" | jq -r ".[0].commit.sha")
+          recent_commit=$(curl -sL "https://api.github.com/repos/SyndiShanX/Update-Classes/commits?path=Changes.txt" | jq -r ".[0].sha")
           echo "Last commit to Changes.txt was $recent_commit"
           echo "needs-reroll=[[ $recent_commit != $(cat .github/workflow_data/previous-commit)]]" >> "$GITHUB_OUTPUT"
           echo "hash=$recent_commit" >> "$GITHUB_OUTPUT"
