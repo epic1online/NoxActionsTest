@@ -31,7 +31,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: grab class mappings
-        run: gh api /repos/syndishanx/update-classes/contents/Changes.txt > Changes.txt
+        run: 'gh api -H "accept: application/vnd.github.raw" /repos/syndishanx/update-classes/contents/Changes.txt > Changes.txt'
         # uses: actions/checkout@v6
         # with:
         #   repository: syndishanx/update-classes
@@ -40,7 +40,7 @@ jobs:
         #   sparse-checkout-cone-mode: false
 
       - name: grab class updater utility
-        run: gh api /repos/epic1online/recursive-discord-class-updater/contents/RDCU.js > RDCU.js
+        run: 'gh api -H "accept: application/vnd.github.raw" /repos/epic1online/recursive-discord-class-updater/contents/RDCU.js > RDCU.js'
         # uses: actions/checkout@v6
         # with:
         #   repository: epic1online/recursive-discord-class-updater
