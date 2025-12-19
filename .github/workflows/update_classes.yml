@@ -54,7 +54,7 @@ jobs:
         run: echo "$(curl -sL "https://api.github.com/repos/SyndiShanX/Update-Classes/commits?path=Changes.txt" | jq -r ".[0].sha")" > .github/workflow_data/previous-reroll
         
       - name: clean up
-        run: git clean -fde ".github"
+        run: git clean -ffde ".github"
 
       - name: create pr
         uses: peter-evans/create-pull-request@v8
