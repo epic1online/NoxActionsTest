@@ -17,7 +17,7 @@ jobs:
         run: |
           recent_commit=$(curl -sL "https://api.github.com/repos/SyndiShanX/Update-Classes/commits?path=Changes.txt" | jq -r ".[0].commit.sha")
           echo "Last commit to Changes.txt was $recent_commit"
-          echo "needs-reroll=[[ $recent_commit != $(cat .github/workflows/previous-commit)]]" >> "$GITHUB_OUTPUT"
+          echo "needs-reroll=[[ $recent_commit != $(cat .github/workflow_data/previous-commit)]]" >> "$GITHUB_OUTPUT"
           echo "hash=$recent_commit" >> "$GITHUB_OUTPUT"
 
   reroll-classes:
@@ -52,7 +52,7 @@ jobs:
         run: node tools/updater/RDCU.js tools/changes/Changes.txt
 
       - name: store commit hash
-        run: echo "${{ needs.check-for-updates.outputs.hash }}" > .github/workflows/previous-reroll
+        run: echo "${{ needs.check-for-updates.outputs.hash }}" > .github/workflow_data/previous-reroll
         
       - name: remove artifacts
         run: rm -rf tools/
