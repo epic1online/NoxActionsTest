@@ -31,22 +31,17 @@ jobs:
         uses: actions/checkout@v6
 
       - name: grab class mappings
-        run: 'gh api -H "accept: application/vnd.github.raw" /repos/syndishanx/update-classes/contents/Changes.txt > Changes.txt'
-        # uses: actions/checkout@v6
-        # with:
-        #   repository: syndishanx/update-classes
-        #   path: tools/changes
-        #   sparse-checkout: Changes.txt
-        #   sparse-checkout-cone-mode: false
+        run: |
+          if [[ ! -s ".github/workflow_data/previous-reroll" ]]; then
+              echo "Previous re-roll commit does not exist. Fetching full class mapping"
+          else
+              echo "Found previous re-roll commit. Fetching partial class mapping"
+              # TODO: Need to figure this part out.
+          fi
+          'gh api -H "accept: application/vnd.github.raw" /repos/syndishanx/update-classes/contents/Changes.txt > Changes.txt'
 
       - name: grab class updater utility
         run: 'gh api -H "accept: application/vnd.github.raw" /repos/epic1online/recursive-discord-class-updater/contents/RDCU.js > RDCU.js'
-        # uses: actions/checkout@v6
-        # with:
-        #   repository: epic1online/recursive-discord-class-updater
-        #   path: tools/updater
-        #   sparse-checkout: RDCU.js
-        #   sparse-checkout-cone-mode: false
 
       - name: setup node
         uses: actions/setup-node@v6
