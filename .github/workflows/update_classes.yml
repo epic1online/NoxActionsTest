@@ -1,0 +1,67 @@
+name: automatic class updater
+on:
+  schedule:
+    - cron: '15 3 * * *'
+  
+jobs:
+  check-for-updates:
+    runs-on: ubuntu-latest
+    outputs:
+      needs-reroll: ${{ steps.check-updates.outputs.needs-reroll }}
+      hash: ${{ steps.check-updates.outputs.hash }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: check if Changes.txt has been updated since the previous class reroll
+        id: check-updates
+        run: |
+          recent_commit=$(curl -sL "https://api.github.com/repos/SyndiShanX/Update-Classes/commits?path=Changes.txt" | jq -r ".[0].commit.sha")
+          echo "Last commit to Changes.txt was $recent_commit"
+          echo "needs-reroll=[[ $recent_commit != $(cat .github/workflows/previous-commit)]]" >> "$GITHUB_OUTPUT"
+          echo "hash=$recent_commit" >> "$GITHUB_OUTPUT"
+
+  reroll-classes:
+    runs-on: ubuntu-latest
+    needs: check-for-updates
+    if: ${{ needs.check-for-updates.outputs.needs-reroll }}
+
+    steps:
+      - name: checkout current repository
+        uses: actions/checkout@v6
+        
+      - name: grab class mappings
+        uses: actions/checkout@v6
+        with:
+          repository: SyndiShanX/Update-Classes
+          path: tools/changes
+          sparse-checkout: Changes.txt
+          sparse-checkout-cone-mode: false
+          
+      - name: grab class updater utility
+        uses: actions/checkout@v6
+        with:
+          repository: epic1online/recursive-discord-class-updater
+          path: tools/updater
+          sparse-checkout: RDCU.js
+          sparse-checkout-cone-mode: false
+
+      - name: setup node
+        uses: actions/setup-node@v6
+
+      - name: update classes
+        run: node tools/updater/RDCU.js tools/changes/Changes.txt
+
+      - name: store commit hash
+        run: echo "${{ needs.check-for-updates.outputs.hash }}" > .github/workflows/previous-reroll
+        
+      - name: remove artifacts
+        run: rm -rf tools/
+
+      - name: create pr
+        uses: peter-evans/create-pull-request@v8
+        with:
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          branch: class-reroll
+          delete-branch: true
+          title: Automated class reroll
+          commit-message: class reroll
