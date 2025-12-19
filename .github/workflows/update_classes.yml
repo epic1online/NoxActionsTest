@@ -32,12 +32,12 @@ jobs:
 
       - name: grab class mappings
         run: |
-          # if [[ ! -s ".github/workflow_data/previous-reroll" ]]; then
-          #     echo "Previous re-roll commit does not exist. Fetching full class mapping"
-          # else
-          #     echo "Found previous re-roll commit. Fetching partial class mapping"
-          #     # TODO: Need to figure this part out.
-          # fi
+          if [[ ! -d ".github/workflow_data" || ! -s ".github/workflow_data/previous-reroll" ]]; then
+              echo "Previous re-roll commit does not exist. Fetching full class mapping"
+          else
+              echo "Found previous re-roll commit. Fetching partial class mapping"
+              # TODO: Need to figure this part out.
+          fi
           gh api -H "accept: application/vnd.github.raw" /repos/syndishanx/update-classes/contents/Changes.txt > Changes.txt
 
       - name: grab class updater utility
