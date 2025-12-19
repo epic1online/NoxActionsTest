@@ -20,12 +20,12 @@ jobs:
           recent_commit=$(gh api -XGET /repos/syndishanx/update-classes/commits -f path=Changes.txt --jq ".[0].sha")
           echo "Last commit to Changes.txt was $recent_commit"
           if [[ ! -e .github/workflow_data/previous-reroll || ! $recent_commit == $(cat .github/workflow_data/previous-reroll) ]]; then
-              needs-reroll=true
+              needs_reroll=true
           else
-              needs-reroll=false
+              needs_reroll=false
           fi
 
-          echo "needs-reroll=$needs-reroll" >> "$GITHUB_OUTPUT"
+          echo "needs-reroll=$needs_reroll" >> "$GITHUB_OUTPUT"
 
   reroll-classes:
     runs-on: ubuntu-latest
