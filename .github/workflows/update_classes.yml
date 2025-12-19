@@ -15,7 +15,7 @@ jobs:
       - name: check if Changes.txt has been updated since the previous class reroll
         id: check-updates
         run: |
-          recent_commit=$(gh api -XGET /repos/syndishanx/update-classes/commits -f path=Changes.txt" --jq ".[0].sha")
+          recent_commit=$(gh api -XGET /repos/syndishanx/update-classes/commits -f path=Changes.txt --jq ".[0].sha")
           echo "Last commit to Changes.txt was $recent_commit"
           echo "needs-reroll=[[ $recent_commit != $(cat .github/workflow_data/previous-commit)]]" >> "$GITHUB_OUTPUT"
 
@@ -53,7 +53,7 @@ jobs:
         run: node RDCU.js
 
       - name: store commit hash
-        run: echo $(gh api -XGET /repos/syndishanx/update-classes/commits -f path=Changes.txt" --jq ".[0].sha") | install -D /dev/stdin .github/workflow_data/previous-reroll
+        run: echo $(gh api -XGET /repos/syndishanx/update-classes/commits -f path=Changes.txt --jq ".[0].sha") | install -D /dev/stdin .github/workflow_data/previous-reroll
 
       - name: clean up
         run: git clean -ffde ".github"
