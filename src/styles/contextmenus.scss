@@ -1,7 +1,7 @@
 @use "../elevations";
 
 // outer menu
-.menu_c1e9c4 {
+.c1e9c47c23f12ca3-menu {
     padding: 0 8px;
     overflow: visible;
     border: 0;
@@ -10,51 +10,51 @@
     box-shadow: none;
 }
 
-.menu_c1e9c4.submenu_c1e9c4 {
+.c1e9c47c23f12ca3-menu.subc1e9c47c23f12ca3-menu {
     padding: 0;
 }
 
 // divider line
-.separator_c1e9c4 {
+.c1e9c47c23f12ca3-separator {
     display: none;
 }
 
 // inner menu
-.scroller_c1e9c4 {
+.c1e9c47c23f12ca3-scroller {
     padding: 0;
     overflow: hidden auto !important;
     background-color: var(--nox-level2);
     box-shadow: elevations.$elevation-shadow;
 
     // menu items
-    .item_c1e9c4 {
+    .c1e9c47c23f12ca3-item {
         margin: 0;
         padding: 10px 12px 10px 16px;
         border-radius: 0;
 
-        &.colorDefault_c1e9c4 {
+        &.c1e9c47c23f12ca3-colorDefault {
             color: var(--nox-white6);
 
-            &.focused_c1e9c4 {
+            &.c1e9c47c23f12ca3-focused {
                 // background-color: rgba(225, 225, 225, 0.03);
                 background-color: var(--nox-accent);
                 color: var(--nox-white8);
             }
         }
 
-        &.colorBrand_c1e9c4 {
+        &.c1e9c47c23f12ca3-colorBrand {
             color: var(--nox-accent);
 
-            &.focused_c1e9c4 {
+            &.c1e9c47c23f12ca3-focused {
                 background-color: var(--nox-accent);
                 color: var(--nox-white9);
             }
         }
 
-        &.colorDanger_c1e9c4 {
+        &.c1e9c47c23f12ca3-colorDanger {
             color: #f04747;
 
-            &.focused_c1e9c4 {
+            &.c1e9c47c23f12ca3-focused {
                 background-color: #f04747;
                 color: var(--nox-white9);
             }
@@ -63,10 +63,10 @@
     }
 
     // quick reacts
-    .wrapper_f563df {
+    .f563df886a7377be-wrapper {
         padding: 6px;
     }
-    .button_f563df {
+    .f563df886a7377be-button {
         border-radius: 50%;
         background-color: rgba(225, 225, 225, 0.05);
 
