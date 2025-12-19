@@ -1,24 +1,24 @@
-.container__9293f.themed__9293f {
+._9293f6b2fc12398a-container._9293f6b2fc12398a-themed {
     border: 0;
     background: var(--nox-level3);
 }
 
 // Remove stupid gradient
-.children__9293f::after {
+._9293f6b2fc12398a-children::after {
     display: none;
 }
 
 // channel description
-.topic__6ec1a {
+._6ec1a06139ec3b27-topic {
     color: var(--nox-white4);
 }
 
-.selected_f37cb1 .header_f37cb1,
-.clickable_f37cb1 .header_f37cb1:hover {
+.selected_f37cb1 .f37cb1984c371ee5-header,
+.clickable_f37cb1 .f37cb1984c371ee5-header:hover {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
 // remove border
-.chat_f75fb0.chat_f75fb0.chat_f75fb0 {
+.f75fb00fb7356cbe-chat.f75fb00fb7356cbe-chat.f75fb00fb7356cbe-chat {
     border: 0;
 }
