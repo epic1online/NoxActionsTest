@@ -21,8 +21,8 @@ jobs:
         run: |
           stored_hash=$(cat .github/workflow_data/previous-hash 2>/dev/null || true )
           newest_hash=$(gh api -XGET /repos/syndishanx/update-classes/commits -f path=Changes.txt --jq ".[0].sha")
-          echo "Stored hash was $stored_hash"
-          echo "Newest hash is  $newest_hash"
+          echo "Stored hash is $stored_hash"
+          echo "Newest hash is $newest_hash"
 
           if [[ $newest_hash == $stored_hash ]]; then
             needs_updating=false
