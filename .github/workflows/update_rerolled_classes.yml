@@ -11,24 +11,30 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       needs-updating: ${{ steps.check.outputs.needs-updating }}
-      newest-hash: 
+      stored-hash: ${{ steps.check.outputs.stored-hash }}
+      newest-hash: ${{ steps.check.outputs.newest-hash }}
     steps:
       - uses: actions/checkout@v6
 
       - name: check if Changes.txt has been updated since the previous class reroll
         id: check
         run: |
-          newest_hash=$(gh api -XGET /repos/syndishanx/update-classes/commits -f path=Changes.txt --jq ".[0].sha")
-          echo "Last commit to Changes.txt was $newest_hash"
+          stored_hash=$(cat .github/workflow_data/previous-hash)
+          newest_hash=$(gh api -XGET /repos/syndishanx/update-classes/commits -f path=Changes.txt --jq ".[0].sha") 2>/dev/null
+          echo "Stored hash was $stored_hash"
+          echo "Newest hash is  $newest_hash"
 
-          if [[ ! -e .github/workflow_data/previous-hash || ! $newest_hash == $(cat .github/workflow_data/previous-hash) ]]; then
-              needs_updating=true
+          if [[ $newest_hash == $stored_hash ]]; then
+            needs_updating=false
+            echo "No updated needed, skipping"
           else
-              needs_updating=false
+            needs_updating=true
+            echo "stored-hash=$stored_hash" >> "$GITHUB_OUTPUT"
+            echo "newest-hash=$newest_hash" >> "$GITHUB_OUTPUT"
+            echo "Update needed"
           fi
 
           echo "needs-updating=$needs_updating" >> "$GITHUB_OUTPUT"
-          echo "newest-hash=$newest_hash" >> "$GITHUB_OUTPUT"
 
   reroll-classes:
     runs-on: ubuntu-latest
@@ -41,12 +47,12 @@ jobs:
 
       - name: grab class mappings
         run: |
-          if [[ ! -d ".github/workflow_data" || ! -s ".github/workflow_data/previous-hash" ]]; then
+          if [[ -z "${{ needs.check-for-updates.outputs.stored-hash }}" ]]; then
               echo "Previous re-roll commit does not exist. Fetching full class mapping"
               gh api -H "accept: application/vnd.github.raw" /repos/syndishanx/update-classes/contents/Changes.txt > Changes.txt
           else
               echo "Found previous re-roll commit. Fetching partial class mapping"
-              diff=$(gh api -H 'accept:application/vnd.github+json' /repos/syndishanx/update-classes/compare/$(cat .github/workflow_data/previous-hash)...${{ needs.check-for-updates.outputs.newest-hash }} --jq '.files.[] | select(.filename == "Changes.txt").patch')
+              diff=$(gh api -H 'accept:application/vnd.github+json' /repos/syndishanx/update-classes/compare/${{ needs.check-for-updates.outputs.stored-hash }}...${{ needs.check-for-updates.outputs.newest-hash }} --jq '.files.[] | select(.filename == "Changes.txt").patch')
               
               last_deletion=$(grep '^-' DIFF_FILE | tail -n 1 | cut -c 2-)
               grep '^+' DIFF_FILE | awk -v last=$last_deletion '{ $0=substr($0,2) } NR!=1 || $0!=last { print }' > Changes.txt
