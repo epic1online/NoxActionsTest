@@ -1,4 +1,4 @@
-name: class reroll update
+name: check/update classes
 on:
   schedule:
     - cron: '15 3 * * *'
