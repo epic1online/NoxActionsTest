@@ -53,9 +53,15 @@ jobs:
           else
               echo "Found previous re-roll commit. Fetching partial class mapping"
               gh api -H 'accept:application/vnd.github+json' /repos/syndishanx/update-classes/compare/${{ needs.check-for-updates.outputs.stored-hash }}...${{ needs.check-for-updates.outputs.newest-hash }} --jq '.files.[] | select(.filename == "Changes.txt").patch' > change_diff
-              
+              echo "-----------------------------"
+              cat change_diff
+              echo "-----------------------------"
+              echo "                             "
               last_deletion=$(grep '^-' change_diff | tail -n 1 | cut -c 2-)
               grep '^+' change_diff | awk -v last=$last_deletion '{ $0=substr($0,2) } NR!=1 || $0!=last { print }' > Changes.txt
+              echo "-----------------------------"
+              cat Changes.txt
+              echo "-----------------------------"
           fi
 
       - name: grab class updater utility
