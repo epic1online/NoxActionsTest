@@ -48,13 +48,14 @@ jobs:
       - name: fetch partial class mapping
         if: ${{ needs.check-for-updates.outputs.stored-hash }}
         run: |
-          echo 'TODO: Optimize class mapping (compare endpoint with json does not return patch for large file diffs)'
-          gh api -H "accept: application/vnd.github.raw" /repos/syndishanx/update-classes/contents/Changes.txt > Changes.txt
+          # echo 'TODO: Optimize class mapping (compare endpoint with json does not return patch for large file diffs)'
+          # gh api -H "accept: application/vnd.github.raw" /repos/syndishanx/update-classes/contents/Changes.txt > Changes.txt
 
-          # echo "Found previous re-roll commit. Fetching partial class mapping"
-          # gh api -H 'accept:application/vnd.github+json' /repos/syndishanx/update-classes/compare/${{ needs.check-for-updates.outputs.stored-hash }}...${{ needs.check-for-updates.outputs.newest-hash }} --jq '.files.[] | select(.filename == "Changes.txt").patch' > change_diff
-          # last_deletion=$(grep '^-' change_diff | tail -n 1 | cut -c 2-)
-          # grep '^+' change_diff | awk -v last=$last_deletion '{ $0=substr($0,2) } NR!=1 || $0!=last { print }' > Changes.txt
+          echo "Found previous re-roll commit. Fetching partial class mapping"
+          gh api -H 'accept:application/vnd.github.diff' /repos/syndishanx/update-classes/compare/${{ needs.check-for-updates.outputs.stored-hash }}...${{ needs.check-for-updates.outputs.newest-hash }} | sed -n '/^diff --git a\/Changes.txt b\/Changes.txt$/{:a; p; n; /^diff/q; ba}' > change_diff
+          last_deletion=$(grep '^-[^-]' change_diff | tail -n 1 | cut -c 2-)
+          grep '^+[^+]' change_diff | awk -v last=$last_deletion '{ $0=substr($0,2) } NR!=1 || $0!=last { print }' > Changes.txt
+          cat Changes.txt
 
       - name: fetch full class mapping  
         if: ${{ ! needs.check-for-updates.outputs.stored-hash }}
