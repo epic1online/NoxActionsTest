@@ -1,6 +1,6 @@
 @use "../../elevations";
 
-.jumpToPresentBar__0f481 {
+._0f481cbbd7530492-jumpToPresentBar {
     // width: auto;
     right: 20px;
     bottom: 30px;
@@ -10,16 +10,16 @@
     background-color: var(--nox-accent);
     box-shadow: elevations.$elevation-shadow;
 
-    .barButtonMain__0f481 {
+    ._0f481cbbd7530492-barButtonMain {
         display: none;
     }
 
-    .barButtonAlt__0f481 {
+    ._0f481cbbd7530492-barButtonAlt {
         padding: 0 1px 0 10px;
         text-align: center;
     }
     
-    .barButtonIcon__0f481 {
+    ._0f481cbbd7530492-barButtonIcon {
         width: 26px;
         height: 26px;
         margin-left: 0;
@@ -43,11 +43,11 @@
         }
     }
 
-    .barButtonIcon__0f481 path {
+    ._0f481cbbd7530492-barButtonIcon path {
         display: none;
     }
 }
 
-.newMessagesBar__0f481 {
+._0f481cbbd7530492-newMessagesBar {
     background-color: var(--nox-accent);
 }

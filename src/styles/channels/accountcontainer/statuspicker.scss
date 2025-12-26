@@ -19,7 +19,7 @@
         content: none;
     }
 
-    .scroller_c1e9c4 {
+    .c1e9c47c23f12ca3-scroller {
         padding: 0 !important;
         background-color: transparent;
         box-shadow: none;
@@ -31,10 +31,10 @@
         overflow: hidden !important;
     }
 
-    .header__5be3e,
-    .wrapper_da5890,
+    ._5be3ef42f92174b2-header,
+    .da589062f0c96515-wrapper,
     .username_af7fb7,
-    .descriptionClamp_f5f93a,
+    .f5f93a5c4078d63c-descriptionClamp,
     .activity_f00225 {
         display: none;
     }
@@ -71,40 +71,40 @@
 
 #account,
 #status {
-    >.scroller_c1e9c4>div>div>.item_c1e9c4,
-    >.scroller_c1e9c4>div>.item_c1e9c4 {
+    >.c1e9c47c23f12ca3-scroller>div>div>.c1e9c47c23f12ca3-item,
+    >.c1e9c47c23f12ca3-scroller>div>.c1e9c47c23f12ca3-item {
         margin: 0;
         padding: 14px 16px;
         animation: anim-account-item 400ms cubic-bezier(0.4, 0, 0, 1) backwards;
     }
 }
 
-#status-status-picker.item_c1e9c4.item_c1e9c4.item_c1e9c4 {
+#status-status-picker.c1e9c47c23f12ca3-item.c1e9c47c23f12ca3-item.c1e9c47c23f12ca3-item {
     animation-delay: 100ms;
 }
 
-#status-edit-custom-status.item_c1e9c4.item_c1e9c4.item_c1e9c4 {
+#status-edit-custom-status.c1e9c47c23f12ca3-item.c1e9c47c23f12ca3-item.c1e9c47c23f12ca3-item {
     animation-delay: 200ms;
 }
 
-#account-switch-account.item_c1e9c4.item_c1e9c4.item_c1e9c4 {
+#account-switch-account.c1e9c47c23f12ca3-item.c1e9c47c23f12ca3-item.c1e9c47c23f12ca3-item {
     animation-delay: 300ms;
 }
 
 #account {
-    .item_c1e9c4[id^="account-d"].item_c1e9c4 {
+    .c1e9c47c23f12ca3-item[id^="account-d"].c1e9c47c23f12ca3-item {
         animation-delay: 400ms;
     }
 }
 
 #account,
 #status {
-    .item_c1e9c4.menuItemFocused_ad5fac {
+    .c1e9c47c23f12ca3-item.menuItemFocused_ad5fac {
         background: rgba(255, 255, 255, 0.03);
     }
 }
 
-.colorDefault_c1e9c4:active:not(.hideInteraction_c1e9c4) {
+.c1e9c47c23f12ca3-colorDefault:active:not(.c1e9c47c23f12ca3-hideInteraction) {
     background-color: var(--nox-accent);
     filter: brightness(0.9);
 }
@@ -117,7 +117,7 @@
 
 #account,
 #status {
-    .submenuPaddingContainer_c1e9c4 {
+    .c1e9c47c23f12ca3-submenuPaddingContainer {
         position: absolute;
         left: -4px;
         padding: 0;
@@ -127,32 +127,32 @@
 
 #account,
 #status {
-    .submenu_c1e9c4 {
+    .subc1e9c47c23f12ca3-menu {
         min-width: unset;
         border-radius: 0;
         background: var(--nox-level3);
     }
 }
 
-#account-switch-account+.layer_da8173 .submenu_c1e9c4 {
+#account-switch-account+.layer_da8173 .subc1e9c47c23f12ca3-menu {
     width: 100%;
     animation: anim-status-bg 700ms cubic-bezier(0.4, 0, 0, 1);
 
-    .scroller_c1e9c4 {
+    .c1e9c47c23f12ca3-scroller {
         overflow: hidden auto !important;
     }
 
-    .item_c1e9c4 {
+    .c1e9c47c23f12ca3-item {
         height: 44px;
     }
 }
 
-#status-status-picker+.layer_da8173 .submenu_c1e9c4 {
+#status-status-picker+.layer_da8173 .subc1e9c47c23f12ca3-menu {
     width: 128px;
     height: 138px;
     animation: anim-status-bg 700ms cubic-bezier(0.4, 0, 0, 1);
 
-    .scroller_c1e9c4 {
+    .c1e9c47c23f12ca3-scroller {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -162,7 +162,7 @@
     }
 }
 
-#status .item_c1e9c4[id^="status-status-picker-"] {
+#status .c1e9c47c23f12ca3-item[id^="status-status-picker-"] {
     padding: 0;
 
     .icon_af7fb7 {
@@ -178,7 +178,7 @@
         display: none;
     }
 
-    .status_a423bd {
+    .a423bdd721ddcc83-status {
         background-color: transparent !important;
     }
 }
@@ -189,12 +189,12 @@
     animation: anim-account-item 400ms cubic-bezier(0.4, 0, 0, 1) backwards;
 }
 
-#status .submenu_c1e9c4 .focused_c1e9c4[id^="status-status-picker"],
-#status .submenu_c1e9c4 .colorDefault_c1e9c4[id^="status-status-picker"] {
+#status .subc1e9c47c23f12ca3-menu .c1e9c47c23f12ca3-focused[id^="status-status-picker"],
+#status .subc1e9c47c23f12ca3-menu .c1e9c47c23f12ca3-colorDefault[id^="status-status-picker"] {
     background-color: transparent;
 }
 
-#status .focused_c1e9c4 .statusItem_af7fb7 .icon_af7fb7 {
+#status .c1e9c47c23f12ca3-focused .statusItem_af7fb7 .icon_af7fb7 {
     z-index: 2;
     transform: scale(1.2);
     transition: all 200ms cubic-bezier(0, 0, 0, 1);
