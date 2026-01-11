@@ -1,4 +1,4 @@
-._974928fe84ca9647-searchBar {
+.c322aadb96ff59c9-searchBar {
     background: var(--nox-level2);
 }
 
@@ -7,8 +7,8 @@
     color: var(--nox-white3);
 }
 
-._974928fe84ca9647-searchBar .bd818628221af7aa-searchAnswer,
-._974928fe84ca9647-searchBar .bd818628221af7aa-searchFilter {
+.c322aadb96ff59c9-searchBar .bd818628221af7aa-searchAnswer,
+.c322aadb96ff59c9-searchBar .bd818628221af7aa-searchFilter {
     margin-left: 0;
     padding-left: 0;
     background: rgba(255 255 255 / 10%);
@@ -25,26 +25,26 @@
     box-shadow: 0 5px 10px rgba(0 0 0 / 40%);
 }
 
-._56fec8e8b8048fe0-searchOption {
-    ._56fec8e8b8048fe0-filter {
+._16eb0bfd5c5a90d1-searchOption {
+    ._16eb0bfd5c5a90d1-filter {
         color: var(--nox-white6);
     }
-    ._56fec8e8b8048fe0-answer {
+    ._16eb0bfd5c5a90d1-answer {
         color: var(--nox-white4);
         font-weight: 400;
     }
     &:hover {
         background-color: rgba(255, 255, 255, 0.05);
-        ._56fec8e8b8048fe0-filter {
+        ._16eb0bfd5c5a90d1-filter {
             color: var(--nox-white9);
         }
-        ._56fec8e8b8048fe0-answer {
+        ._16eb0bfd5c5a90d1-answer {
             color: var(--nox-white6);
         }
     }
 }
 
-._55c999adcf6db265-container ._56fec8e8b8048fe0-option::after {
+._55c999adcf6db265-container ._16eb0bfd5c5a90d1-option::after {
     background: none;
 }
 
@@ -52,14 +52,14 @@
     border: 0;
     background: var(--nox-level2);
 }
-._56fec8e8b8048fe0-resultsGroup {
-    ._56fec8e8b8048fe0-header,
-    ._56fec8e8b8048fe0-searchLearnMore {
+.a7e67f4ddd7c6bb2-searchResultGroup {
+    ._16eb0bfd5c5a90d1-header,
+    ._16eb0bfd5c5a90d1-searchLearnMore {
         color: var(--nox-white7);
         font-weight: 700;
     }
     
-    ._56fec8e8b8048fe0-searchLearnMore:hover {
+    ._16eb0bfd5c5a90d1-searchLearnMore:hover {
         color: var(--nox-white9);
     }
     
@@ -69,8 +69,8 @@
 }
 
 // results pane
-.a9e7064fdee8e9b0-searchResultsWrap,
-.f3b986a284a18c78-searchHeader {
+.a98f3b020416ad54-searchResultsWrap,
+.ae7890a1b8e75804-searchHeader {
     background-color: var(--nox-level2);
 }
 
@@ -81,7 +81,7 @@
     stroke: var(--nox-accent);
 }
 
-._02a39cb2980ceaaf-searchResult {
+._80bf8435713f6adb-searchResult {
     border-radius: 3px;
     background: var(--nox-level1);
 
